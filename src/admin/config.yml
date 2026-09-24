@@ -1,0 +1,200 @@
+# ============================================================
+# Interface d'administration du site TBONS (Decap CMS)
+# Accessible à l'adresse : https://<votre-site>/admin/
+# ============================================================
+
+backend:
+  name: github
+  repo: AssoLaRun/tbons-site
+  branch: main
+  base_url: https://api.netlify.com       # connexion via Netlify (OAuth GitHub)
+  commit_messages:
+    create: "Ajout : {{collection}} « {{slug}} »"
+    update: "Modification : {{collection}} « {{slug}} »"
+    delete: "Suppression : {{collection}} « {{slug}} »"
+    uploadMedia: "Ajout de l'image {{path}}"
+    deleteMedia: "Suppression de l'image {{path}}"
+
+# Pour tester en local sans GitHub : npx decap-server puis décommenter
+# local_backend: true
+
+locale: fr
+site_url: https://tobeornot-subir.com
+display_url: https://tobeornot-subir.com
+logo_url: ""
+
+media_folder: src/assets/img/uploads
+public_folder: /assets/img/uploads
+
+collections:
+
+  # ---------- 1. Infos clés et page d'accueil ----------
+  - name: reglages
+    label: "Infos clés & page d'accueil"
+    editor: { preview: false }
+    files:
+      - name: site
+        label: "Infos clés de l'association"
+        file: src/_data/site.json
+        fields:
+          - { name: nom, label: "Nom de l'association", widget: string }
+          - { name: sigle, label: "Sigle", widget: string }
+          - { name: baseline, label: "Sous-titre à côté du logo", widget: string }
+          - { name: description, label: "Description (Google et réseaux sociaux)", widget: text }
+          - { name: url, label: "Adresse du site", widget: string }
+          - { name: logo, label: "Logo (carré, PNG ou SVG)", widget: image, required: false }
+          - { name: email, label: "E-mail de contact", widget: string, required: false }
+          - { name: telephone, label: "Téléphone", widget: string, required: false }
+          - { name: adresse, label: "Adresse postale", widget: string }
+          - { name: lien_don, label: "Lien du bouton « Faire un don » (HelloAsso)", widget: string, required: false }
+          - { name: lien_adhesion, label: "Lien du bouton « Adhérer » (HelloAsso)", widget: string, required: false }
+          - { name: instagram, label: "Lien Instagram", widget: string, required: false }
+          - { name: facebook, label: "Lien Facebook", widget: string, required: false }
+          - { name: linkedin, label: "Lien LinkedIn", widget: string, required: false }
+          - { name: kit_presse, label: "Kit presse (PDF)", widget: file, required: false }
+
+      - name: accueil
+        label: "Page d'accueil"
+        file: src/_data/accueil.json
+        fields:
+          - name: hero
+            label: "Bandeau d'ouverture"
+            widget: object
+            fields:
+              - { name: etiquette, label: "Petite étiquette au-dessus du titre", widget: string }
+              - { name: titre_ligne1, label: "Titre, ligne 1", widget: string }
+              - { name: titre_ligne2, label: "Titre, ligne 2 (début)", widget: string }
+              - { name: titre_accent, label: "Titre, ligne 2 (mot en couleur)", widget: string }
+              - { name: texte, label: "Texte d'introduction", widget: text }
+              - { name: photo, label: "Grande photo", widget: image, required: false }
+              - { name: photo_alt, label: "Description de la photo (accessibilité)", widget: string, required: false }
+              - { name: encart_titre, label: "Encart sur la photo : surtitre", widget: string, required: false }
+              - { name: encart_texte, label: "Encart sur la photo : texte", widget: string, required: false }
+          - name: qui
+            label: "Bloc « Qui sommes-nous »"
+            widget: object
+            fields:
+              - { name: titre, label: "Titre", widget: string }
+              - { name: texte, label: "Texte", widget: text }
+          - name: chiffres
+            label: "Chiffres clés"
+            label_singular: "chiffre"
+            widget: list
+            max: 4
+            summary: "{{fields.valeur}} – {{fields.libelle}}"
+            fields:
+              - { name: valeur, label: "Valeur (ex. 120)", widget: string }
+              - { name: libelle, label: "Libellé (ex. Adhérents)", widget: string }
+          - { name: mission_titre, label: "Titre de la section mission", widget: string }
+          - name: mission
+            label: "Les engagements (3 conseillés)"
+            label_singular: "engagement"
+            widget: list
+            summary: "{{fields.titre}}"
+            fields:
+              - { name: titre, label: "Titre", widget: string }
+              - { name: texte, label: "Texte", widget: text }
+          - name: lyceen
+            label: "Bloc « Tu es lycéen ? »"
+            widget: object
+            fields:
+              - { name: titre, label: "Titre", widget: string }
+              - { name: texte, label: "Texte", widget: text }
+              - { name: bouton_candidature, label: "Texte du bouton de candidature", widget: string, required: false }
+              - { name: lien_candidature, label: "Lien de candidature (vide = bouton masqué)", widget: string, required: false }
+              - name: tuiles
+                label: "Tuiles"
+                label_singular: "tuile"
+                widget: list
+                max: 4
+                summary: "{{fields.titre}}"
+                fields:
+                  - { name: titre, label: "Titre", widget: string }
+                  - { name: texte, label: "Sous-texte", widget: string }
+                  - { name: lien, label: "Lien (ex. /espace-lyceen/)", widget: string, required: false }
+                  - { name: mise_en_avant, label: "Mettre en couleur (orange)", widget: boolean, default: false }
+          - name: soutenir
+            label: "Bloc « Nous soutenir »"
+            widget: object
+            fields:
+              - { name: titre, label: "Titre", widget: string }
+              - { name: texte, label: "Texte", widget: text }
+
+      - name: partenaires
+        label: "Partenaires et lycées"
+        file: src/_data/partenaires.json
+        fields:
+          - { name: titre, label: "Titre de la section", widget: string }
+          - { name: texte, label: "Texte d'accompagnement", widget: text }
+          - name: partenaires
+            label: "Partenaires"
+            label_singular: "partenaire"
+            widget: list
+            summary: "{{fields.nom}}"
+            fields:
+              - { name: nom, label: "Nom", widget: string }
+              - { name: logo, label: "Logo (vide = nom affiché)", widget: image, required: false }
+              - { name: lien, label: "Site web", widget: string, required: false }
+          - { name: lycees_titre, label: "Titre de la liste des lycées", widget: string }
+          - { name: lycees, label: "Lycées participants", label_singular: "lycée", widget: list, field: { name: nom, label: "Nom du lycée", widget: string } }
+
+  # ---------- 2. Nos actions ----------
+  - name: actions
+    label: "Nos actions"
+    label_singular: "action"
+    folder: src/actions
+    create: true
+    slug: "{{slug}}"
+    identifier_field: titre
+    summary: "{{ordre}}. {{titre}}"
+    sortable_fields: [ordre, titre]
+    fields:
+      - { name: titre, label: "Titre", widget: string }
+      - { name: resume, label: "Résumé (affiché sur la carte)", widget: text }
+      - { name: image, label: "Photo", widget: image, required: false }
+      - { name: image_alt, label: "Description de la photo", widget: string, required: false }
+      - { name: phare, label: "Projet phare (grande carte sur l'accueil)", widget: boolean, default: false }
+      - { name: ordre, label: "Ordre d'affichage", widget: number, value_type: int, default: 10 }
+      - { name: brouillon, label: "Brouillon (non publié)", widget: boolean, default: false, required: false }
+      - { name: body, label: "Présentation détaillée", widget: markdown }
+
+  # ---------- 3. Actualités ----------
+  - name: actualites
+    label: "Actualités & presse"
+    label_singular: "actualité"
+    folder: src/actualites
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: titre
+    summary: "{{date | date('DD/MM/YYYY')}} · {{categorie}} · {{titre}}"
+    sortable_fields: [date, titre, categorie]
+    view_filters:
+      - { label: "Événements", field: categorie, pattern: "Événement" }
+      - { label: "Presse", field: categorie, pattern: "Presse" }
+      - { label: "Communiqués", field: categorie, pattern: "Communiqué" }
+    fields:
+      - { name: titre, label: "Titre", widget: string }
+      - { name: date, label: "Date", widget: datetime, date_format: "DD/MM/YYYY", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+      - { name: categorie, label: "Catégorie", widget: select, options: ["Événement", "Presse", "Intervention", "Communiqué"], default: "Événement" }
+      - { name: image, label: "Photo", widget: image, required: false }
+      - { name: image_alt, label: "Description de la photo", widget: string, required: false }
+      - { name: resume, label: "Résumé", widget: text, required: false }
+      - { name: lien_externe, label: "Lien vers l'article (presse) — si rempli, la carte y renvoie directement", widget: string, required: false }
+      - { name: brouillon, label: "Brouillon (non publié)", widget: boolean, default: false, required: false }
+      - { name: body, label: "Contenu", widget: markdown, required: false }
+
+  # ---------- 4. Pages ----------
+  - name: pages
+    label: "Pages"
+    label_singular: "page"
+    folder: src/pages
+    create: true
+    slug: "{{slug}}"
+    identifier_field: titre
+    summary: "{{titre}}"
+    fields:
+      - { name: titre, label: "Titre", widget: string }
+      - { name: chapo, label: "Chapô (phrase d'introduction)", widget: text, required: false }
+      - { name: image, label: "Photo d'en-tête", widget: image, required: false }
+      - { name: ordre_menu, label: "Ordre", widget: number, value_type: int, default: 10, required: false }
+      - { name: body, label: "Contenu", widget: markdown }

@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+{%- from "partials/macros.njk" import photo -%}
+<article>
+  <header class="page-entete">
+    <div class="conteneur conteneur--etroit">
+      <h1>{{ titre }}</h1>
+      {% if chapo %}<p class="grand-texte">{{ chapo }}</p>{% endif %}
+    </div>
+  </header>
+  {% if image %}<div class="conteneur conteneur--etroit">{{ photo(image, titre, "", "page-photo") }}</div>{% endif %}
+  <div class="conteneur conteneur--etroit prose">
+    {{ content | safe }}
+  </div>
+</article>

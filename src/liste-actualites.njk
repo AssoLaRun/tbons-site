@@ -1,0 +1,34 @@
+---
+layout: base.njk
+permalink: /actualites/
+titre: Restez informé
+chapo: Actualités, articles de presse et communiqués.
+---
+{%- from "partials/macros.njk" import photo -%}
+<header class="page-entete">
+  <div class="conteneur">
+    <h1>{{ titre }}</h1>
+    <p class="grand-texte">{{ chapo }}</p>
+    <div class="filtres" role="group" aria-label="Filtrer par catégorie">
+      <button type="button" class="filtre" aria-pressed="true" data-filtre="">Tout</button>
+      <button type="button" class="filtre" aria-pressed="false" data-filtre="Événement">Événements</button>
+      <button type="button" class="filtre" aria-pressed="false" data-filtre="Presse">Vu dans la presse</button>
+      <button type="button" class="filtre" aria-pressed="false" data-filtre="Intervention">Nos interventions</button>
+      <button type="button" class="filtre" aria-pressed="false" data-filtre="Communiqué">Communiqués</button>
+    </div>
+  </div>
+</header>
+<div class="conteneur bloc--bas">
+  <div class="grille grille--3 actus">
+    {% for n in collections.actualites %}
+    <a class="actu" data-categorie="{{ n.data.categorie }}" href="{{ n.data.lien_externe or n.url }}">
+      {{ photo(n.data.image, n.data.image_alt, "Photo", "actu__photo") }}
+      <span class="actu__meta">{{ n.data.categorie }} · {{ n.date | dateFr }}</span>
+      <h3>{{ n.data.titre }}</h3>
+      {% if n.data.resume %}<p>{{ n.data.resume }}</p>{% endif %}
+    </a>
+    {% else %}
+    <p>Aucune actualité pour le moment.</p>
+    {% endfor %}
+  </div>
+</div>

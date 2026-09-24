@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+{%- from "partials/macros.njk" import photo -%}
+<article>
+  <header class="page-entete">
+    <div class="conteneur conteneur--etroit">
+      <a class="fil" href="/actions/">← Nos actions</a>
+      {% if phare %}<span class="badge">Projet phare</span>{% endif %}
+      <h1>{{ titre }}</h1>
+      <p class="grand-texte">{{ resume }}</p>
+    </div>
+  </header>
+  <div class="conteneur conteneur--etroit">{{ photo(image, image_alt, "Photo à ajouter", "page-photo") }}</div>
+  <div class="conteneur conteneur--etroit prose">
+    {{ content | safe }}
+  </div>
+</article>

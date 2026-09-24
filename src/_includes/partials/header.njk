@@ -1,0 +1,28 @@
+<header class="entete">
+  <div class="entete__barre conteneur">
+    <a class="marque" href="/">
+      {% if site.logo %}<img class="marque__logo" src="{{ site.logo }}" alt="">{% else %}<span class="marque__logo marque__logo--texte" aria-hidden="true">TB</span>{% endif %}
+      <span class="marque__texte">
+        <span class="marque__nom">{{ site.nom }}</span>
+        <span class="marque__baseline">{{ site.baseline }}</span>
+      </span>
+    </a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+      <svg class="burger__ouvrir" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="burger__fermer" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav id="menu" class="menu" aria-label="Navigation principale">
+      <ul class="menu__liens">
+        <li><a href="/qui-sommes-nous/" {% if page.url == "/qui-sommes-nous/" %}aria-current="page"{% endif %}>Qui sommes-nous</a></li>
+        <li><a href="/actions/" {% if "/actions/" in (page.url or "") %}aria-current="page"{% endif %}>Nos actions</a></li>
+        <li><a href="/espace-lyceen/" {% if page.url == "/espace-lyceen/" %}aria-current="page"{% endif %}>Espace lycéen</a></li>
+        <li><a href="/actualites/" {% if "/actualites/" in (page.url or "") %}aria-current="page"{% endif %}>Restez informé</a></li>
+        <li><a href="/contact/" {% if page.url == "/contact/" %}aria-current="page"{% endif %}>Contact</a></li>
+      </ul>
+      <div class="menu__boutons">
+        <a class="bouton bouton--contour" href="{{ site.lien_adhesion or '/nous-soutenir/' }}">Adhérer</a>
+        <a class="bouton bouton--accent" href="{{ site.lien_don or '/nous-soutenir/' }}">Faire un don</a>
+      </div>
+    </nav>
+  </div>
+</header>

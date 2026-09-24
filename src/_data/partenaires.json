@@ -1,0 +1,14 @@
+{
+  "titre": "Ils nous font confiance",
+  "texte": "Institutions, associations et établissements qui soutiennent nos projets.",
+  "partenaires": [
+    { "nom": "Préfecture de La Réunion", "logo": "", "lien": "" },
+    { "nom": "Région Réunion", "logo": "", "lien": "" },
+    { "nom": "Département de La Réunion", "logo": "", "lien": "" },
+    { "nom": "CDJ 974", "logo": "", "lien": "" },
+    { "nom": "PRJIO", "logo": "", "lien": "" },
+    { "nom": "ASFA – Hôpital d'Enfants", "logo": "", "lien": "" }
+  ],
+  "lycees_titre": "Lycées participants au concours ARIL",
+  "lycees": ["[Lycée 1]", "[Lycée 2]", "[Lycée 3]", "[Lycée 4]", "[Lycée 5]", "[Lycée 6]", "[Lycée 7]"]
+}

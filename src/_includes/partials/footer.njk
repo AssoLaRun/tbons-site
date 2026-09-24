@@ -1,0 +1,41 @@
+<footer class="pied">
+  <div class="conteneur pied__haut">
+    <div class="pied__asso">
+      <p class="pied__nom">{{ site.nom }}</p>
+      <p>Association loi 1901<br>{{ site.adresse }}</p>
+    </div>
+    <div class="pied__colonnes">
+      <div>
+        <p class="pied__titre">L'association</p>
+        <ul>
+          <li><a href="/qui-sommes-nous/">Qui sommes-nous</a></li>
+          <li><a href="/actions/">Nos actions</a></li>
+          <li><a href="/#partenaires">Partenaires</a></li>
+          <li><a href="/nous-soutenir/">Nous soutenir</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied__titre">Contact</p>
+        <ul>
+          {% if site.email %}<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>{% else %}<li><a href="/contact/">Nous écrire</a></li>{% endif %}
+          {% if site.telephone %}<li><a href="tel:{{ site.telephone | replace(' ', '') }}">{{ site.telephone }}</a></li>{% endif %}
+          {% if site.kit_presse %}<li><a href="{{ site.kit_presse }}">Kit presse</a></li>{% endif %}
+        </ul>
+      </div>
+      {% if site.instagram or site.facebook or site.linkedin %}
+      <div>
+        <p class="pied__titre">Suivez-nous</p>
+        <ul>
+          {% if site.instagram %}<li><a href="{{ site.instagram }}">Instagram</a></li>{% endif %}
+          {% if site.facebook %}<li><a href="{{ site.facebook }}">Facebook</a></li>{% endif %}
+          {% if site.linkedin %}<li><a href="{{ site.linkedin }}">LinkedIn</a></li>{% endif %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="conteneur pied__bas">
+    <span>© {{ annee }} {{ site.nom }}</span>
+    <a href="/mentions-legales/">Mentions légales</a>
+  </div>
+</footer>

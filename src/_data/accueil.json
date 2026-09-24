@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "etiquette": "Jeunesse · Citoyenneté · Égalité · depuis 2023",
+    "titre_ligne1": "Être acteur.",
+    "titre_ligne2": "Ne plus",
+    "titre_accent": "subir.",
+    "texte": "Nous accompagnons les jeunes réunionnais vers l'engagement citoyen et agissons contre toutes les formes de discrimination, au lycée comme dans la vie de la cité.",
+    "photo": "",
+    "photo_alt": "Les ambassadeurs ARIL sur scène lors de la Grande Finale",
+    "encart_titre": "Concours ARIL",
+    "encart_texte": "7 lycées, 11 finalistes en 2026"
+  },
+  "qui": {
+    "titre": "Une association née à Sainte-Clotilde, portée par des jeunes.",
+    "texte": "To Be or Not Subir (TBONS) est une association loi 1901 fondée en 2023 à Sainte-Clotilde, Saint-Denis. Elle rassemble lycéens, étudiants et jeunes diplômés réunionnais autour d'une conviction simple : chacun peut choisir d'agir plutôt que de subir."
+  },
+  "chiffres": [
+    { "valeur": "2023", "libelle": "Année de création" },
+    { "valeur": "[NB]", "libelle": "Adhérents et bénévoles" },
+    { "valeur": "[NB]", "libelle": "Jeunes accompagnés" }
+  ],
+  "mission_titre": "Notre mission, en trois engagements",
+  "mission": [
+    { "titre": "Éveiller l'engagement citoyen", "texte": "Faire découvrir aux lycéens le fonctionnement des institutions, de la commune à l'État, et leur donner envie de s'y impliquer." },
+    { "titre": "Lutter contre les discriminations", "texte": "Sensibiliser, outiller et faire entendre la voix de celles et ceux qui les vivent, dans les établissements et au-delà." },
+    { "titre": "Donner la parole à la jeunesse réunionnaise", "texte": "Créer des scènes, des rencontres et des projets où les jeunes prennent la parole face aux décideurs du territoire." }
+  ],
+  "lyceen": {
+    "titre": "Tu es lycéen ?",
+    "texte": "Deviens ambassadeur de ton lycée, prends la parole et rencontre celles et ceux qui font La Réunion. Tout ce qu'il te faut pour te lancer est ici.",
+    "bouton_candidature": "Candidater à ARIL 2027",
+    "lien_candidature": "",
+    "tuiles": [
+      { "titre": "Le concours ARIL", "texte": "Règlement, étapes, calendrier", "lien": "/actions/aril/", "mise_en_avant": false },
+      { "titre": "Séminaire citoyen", "texte": "Ateliers sur la gouvernance du territoire", "lien": "/espace-lyceen/", "mise_en_avant": false },
+      { "titre": "Nos ressources", "texte": "Fiches, guides, quiz citoyens", "lien": "/espace-lyceen/", "mise_en_avant": false },
+      { "titre": "Finale 2026", "texte": "18 sept., Parc du Colosse, Saint-André", "lien": "/actualites/", "mise_en_avant": true }
+    ]
+  },
+  "soutenir": {
+    "titre": "Faites grandir le mouvement",
+    "texte": "Chaque adhésion, chaque don et chaque partenariat permet à plus de jeunes de prendre leur place dans la vie citoyenne."
+  }
+}

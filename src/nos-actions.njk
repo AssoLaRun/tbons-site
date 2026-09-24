@@ -1,0 +1,28 @@
+---
+layout: base.njk
+permalink: /actions/
+titre: Nos actions
+chapo: Ce que nous faisons, concrètement.
+---
+{%- from "partials/macros.njk" import photo -%}
+<header class="page-entete">
+  <div class="conteneur">
+    <h1>{{ titre }}</h1>
+    <p class="grand-texte">{{ chapo }}</p>
+  </div>
+</header>
+<div class="conteneur bloc--bas">
+  <div class="grille grille--3">
+    {% for a in collections.actions %}
+    <a class="carte carte--action {% if a.data.phare %}carte--action-phare{% endif %}" href="{{ a.url }}">
+      {{ photo(a.data.image, a.data.image_alt, "Visuel à ajouter", "carte__photo") }}
+      <div class="carte--action__texte">
+        {% if a.data.phare %}<span class="badge">Projet phare</span>{% endif %}
+        <h3>{{ a.data.titre }}</h3>
+        <p>{{ a.data.resume }}</p>
+        <span class="lien">En savoir plus →</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

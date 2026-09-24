@@ -1,0 +1,8 @@
+{# Affiche la photo si elle existe, sinon un emplacement réservé #}
+{% macro photo(src, alt, label, classe) %}
+{%- if src -%}
+<img class="photo {{ classe }}" src="{{ src }}" alt="{{ alt or '' }}" loading="lazy">
+{%- else -%}
+<div class="photo photo--vide {{ classe }}" role="img" aria-label="{{ alt or label }}"><span>{{ label or "Photo à ajouter" }}</span></div>
+{%- endif -%}
+{% endmacro %}
