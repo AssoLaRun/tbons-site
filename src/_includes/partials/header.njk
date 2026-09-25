@@ -1,27 +1,34 @@
+{%- set racine = "/" if lang == "fr" else "/rc/" -%}
+{%- set url = page.url or "" -%}
 <header class="entete">
   <div class="entete__barre conteneur">
-    <a class="marque" href="/">
+    <a class="marque{% if site.logo and not site.afficher_nom %} marque--logo-seul{% endif %}" href="{{ racine }}" aria-label="{{ site.nom }}, {{ t.accueil }}">
       {% if site.logo %}<img class="marque__logo" src="{{ site.logo }}" alt="">{% else %}<span class="marque__logo marque__logo--texte" aria-hidden="true">TB</span>{% endif %}
       <span class="marque__texte">
         <span class="marque__nom">{{ site.nom }}</span>
-        <span class="marque__baseline">{{ site.baseline }}</span>
+        <span class="marque__baseline">{{ t.baseline }}</span>
       </span>
     </a>
-    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
-      <svg class="burger__ouvrir" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      <svg class="burger__fermer" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
-    <nav id="menu" class="menu" aria-label="Navigation principale">
+    <div class="entete__droite">
+      <a class="langue" href="{{ url | autreLangue(lang, collections.all) }}" hreflang="{{ 'rcf' if lang == 'fr' else 'fr' }}" aria-label="{{ t.autre_langue_label }}" title="{{ t.autre_langue_label }}">
+        <span class="langue__opt {% if lang == 'fr' %}est-active{% endif %}">FR</span><span class="langue__opt {% if lang == 'rc' %}est-active{% endif %}">KR</span>
+      </a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="{{ t.ouvrir_menu }}" data-ouvrir="{{ t.ouvrir_menu }}" data-fermer="{{ t.fermer_menu }}">
+        <svg class="burger__ouvrir" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="burger__fermer" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav id="menu" class="menu" aria-label="Navigation">
       <ul class="menu__liens">
-        <li><a href="/qui-sommes-nous/" {% if page.url == "/qui-sommes-nous/" %}aria-current="page"{% endif %}>Qui sommes-nous</a></li>
-        <li><a href="/actions/" {% if "/actions/" in (page.url or "") %}aria-current="page"{% endif %}>Nos actions</a></li>
-        <li><a href="/espace-lyceen/" {% if page.url == "/espace-lyceen/" %}aria-current="page"{% endif %}>Espace lycéen</a></li>
-        <li><a href="/actualites/" {% if "/actualites/" in (page.url or "") %}aria-current="page"{% endif %}>Restez informé</a></li>
-        <li><a href="/contact/" {% if page.url == "/contact/" %}aria-current="page"{% endif %}>Contact</a></li>
+        <li><a href="{{ '/qui-sommes-nous/' | lien(lang) }}" {% if "/qui-sommes-nous/" in url %}aria-current="page"{% endif %}>{{ t.menu_qui }}</a></li>
+        <li><a href="{{ '/actions/' | lien(lang) }}" {% if "/actions/" in url %}aria-current="page"{% endif %}>{{ t.menu_actions }}</a></li>
+        <li><a href="{{ '/espace-lyceen/' | lien(lang) }}" {% if "/espace-lyceen/" in url %}aria-current="page"{% endif %}>{{ t.menu_lyceen }}</a></li>
+        <li><a href="{{ '/actualites/' | lien(lang) }}" {% if "/actualites/" in url %}aria-current="page"{% endif %}>{{ t.menu_actus }}</a></li>
+        <li><a href="{{ '/contact/' | lien(lang) }}" {% if "/contact/" in url %}aria-current="page"{% endif %}>{{ t.menu_contact }}</a></li>
       </ul>
       <div class="menu__boutons">
-        <a class="bouton bouton--contour" href="{{ site.lien_adhesion or '/nous-soutenir/' }}">Adhérer</a>
-        <a class="bouton bouton--accent" href="{{ site.lien_don or '/nous-soutenir/' }}">Faire un don</a>
+        <a class="bouton bouton--contour" href="{{ site.lien_adhesion or ('/nous-soutenir/' | lien(lang)) }}">{{ t.adherer }}</a>
+        <a class="bouton bouton--accent" href="{{ site.lien_don or ('/nous-soutenir/' | lien(lang)) }}">{{ t.faire_don }}</a>
       </div>
     </nav>
   </div>

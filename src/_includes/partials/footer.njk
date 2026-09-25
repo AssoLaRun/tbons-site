@@ -2,29 +2,29 @@
   <div class="conteneur pied__haut">
     <div class="pied__asso">
       <p class="pied__nom">{{ site.nom }}</p>
-      <p>Association loi 1901<br>{{ site.adresse }}</p>
+      <p>{{ t.pied_loi }}<br>{{ site.adresse }}</p>
     </div>
     <div class="pied__colonnes">
       <div>
-        <p class="pied__titre">L'association</p>
+        <p class="pied__titre">{{ t.pied_association }}</p>
         <ul>
-          <li><a href="/qui-sommes-nous/">Qui sommes-nous</a></li>
-          <li><a href="/actions/">Nos actions</a></li>
-          <li><a href="/#partenaires">Partenaires</a></li>
-          <li><a href="/nous-soutenir/">Nous soutenir</a></li>
+          <li><a href="{{ '/qui-sommes-nous/' | lien(lang) }}">{{ t.menu_qui }}</a></li>
+          <li><a href="{{ '/actions/' | lien(lang) }}">{{ t.menu_actions }}</a></li>
+          <li><a href="{{ '/' | lien(lang) }}#partenaires">{{ t.pied_partenaires }}</a></li>
+          <li><a href="{{ '/nous-soutenir/' | lien(lang) }}">{{ t.pied_soutenir }}</a></li>
         </ul>
       </div>
       <div>
-        <p class="pied__titre">Contact</p>
+        <p class="pied__titre">{{ t.pied_contact }}</p>
         <ul>
-          {% if site.email %}<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>{% else %}<li><a href="/contact/">Nous écrire</a></li>{% endif %}
+          {% if site.email %}<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>{% else %}<li><a href="{{ '/contact/' | lien(lang) }}">{{ t.pied_ecrire }}</a></li>{% endif %}
           {% if site.telephone %}<li><a href="tel:{{ site.telephone | replace(' ', '') }}">{{ site.telephone }}</a></li>{% endif %}
-          {% if site.kit_presse %}<li><a href="{{ site.kit_presse }}">Kit presse</a></li>{% endif %}
+          {% if site.kit_presse %}<li><a href="{{ site.kit_presse }}">{{ t.pied_kit }}</a></li>{% endif %}
         </ul>
       </div>
       {% if site.instagram or site.facebook or site.linkedin %}
       <div>
-        <p class="pied__titre">Suivez-nous</p>
+        <p class="pied__titre">{{ t.pied_suivre }}</p>
         <ul>
           {% if site.instagram %}<li><a href="{{ site.instagram }}">Instagram</a></li>{% endif %}
           {% if site.facebook %}<li><a href="{{ site.facebook }}">Facebook</a></li>{% endif %}
@@ -36,6 +36,6 @@
   </div>
   <div class="conteneur pied__bas">
     <span>© {{ annee }} {{ site.nom }}</span>
-    <a href="/mentions-legales/">Mentions légales</a>
+    <a href="{{ '/mentions-legales/' | lien(lang) }}">{{ t.mentions }}</a>
   </div>
 </footer>

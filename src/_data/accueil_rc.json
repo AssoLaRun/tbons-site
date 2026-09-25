@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "etiquette": "Zénès · Sitoyennté · Égalité · dopi 2023",
+    "titre_ligne1": "Èt aktèr.",
+    "titre_ligne2": "Arèt",
+    "titre_accent": "subir.",
+    "texte": "Nou akonpagn bann zénes rényoné vèr langazman sitoyin, é nou lit kont tout kalité diskriminasyon, o lisé kom dann la vi la sité.",
+    "photo_alt": "Bann anbasadèr ARIL si la sèn pandan la Gran Final",
+    "encart_titre": "Konkour ARIL",
+    "encart_texte": "7 lisé, 11 finalis an 2026"
+  },
+  "qui": {
+    "titre": "In lasosiasyon la fine fèt Sint-Klotild, porté par bann zénes.",
+    "texte": "To Be or Not Subir (TBONS) sé in lasosiasyon lwa 1901 kréé an 2023 Sint-Klotild, Sin-Dni. Li rasanm bann lisétyin, bann étidyan ek bann zénes diplomé rényoné otour in lidé sinp : sakinn i pé swazir aji plito ki subir."
+  },
+  "chiffres": [
+    { "libelle": "Lané kréasyon" },
+    { "libelle": "Adéran ek bénévol" },
+    { "libelle": "Zénes akonpagné" }
+  ],
+  "mission_titre": "Nout misyon, an trwa langazman",
+  "mission": [
+    { "titre": "Révèy langazman sitoyin", "texte": "Fé dékouvèr bann lisétyin koman bann zinstitisyon i marsh, dopi la komine ziska l'Éta, é done azot lanvi anvolv azot ladan." },
+    { "titre": "Lit kont bann diskriminasyon", "texte": "Sansibiliz, done bann zouti é fé antann la vwa sak i viv sa, dann bann lékol é pli lwin ankor." },
+    { "titre": "Done la parol la zénès rényonèz", "texte": "Kré bann sèn, bann rankont ek bann projé kote bann zénes i pran la parol divan bann désidèr nout tèritwar." }
+  ],
+  "lyceen": {
+    "titre": "Ou lé o lisé ?",
+    "texte": "Vin anbasadèr out lisé, pran la parol é rankont bann moun i fé La Rényon. Tout sak i fo pou ou lans aou lé isi.",
+    "bouton_candidature": "Kandidat pou ARIL 2027",
+    "tuiles": [
+      { "titre": "Lo konkour ARIL", "texte": "Règleman, bann étap, kalandrié" },
+      { "titre": "Séminèr sitoyin", "texte": "Bann atelyé si koman i zèr nout tèritwar" },
+      { "titre": "Nout bann résours", "texte": "Fis, gid, kiz sitoyin" },
+      { "titre": "Final 2026", "texte": "18 sèktanm, Park Kolos, Sint-André" }
+    ]
+  },
+  "soutenir": {
+    "titre": "Fé grandi lo mouvman",
+    "texte": "Sak adézyon, sak don ek sak parténarya i pèrmèt plis zénes pran zot plas dann la vi sitoyèn."
+  }
+}

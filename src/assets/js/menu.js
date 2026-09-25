@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const basculer = (ouvert) => {
       entete.classList.toggle("est-ouvert", ouvert);
       burger.setAttribute("aria-expanded", String(ouvert));
-      burger.setAttribute("aria-label", ouvert ? "Fermer le menu" : "Ouvrir le menu");
+      burger.setAttribute("aria-label", ouvert ? burger.dataset.fermer : burger.dataset.ouvrir);
     };
     burger.addEventListener("click", () => basculer(!entete.classList.contains("est-ouvert")));
     entete.querySelectorAll(".menu a").forEach((a) => a.addEventListener("click", () => basculer(false)));

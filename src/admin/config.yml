@@ -30,7 +30,7 @@ collections:
 
   # ---------- 1. Infos clés et page d'accueil ----------
   - name: reglages
-    label: "Infos clés & page d'accueil"
+    label: "Infos clés & page d'accueil (FR)"
     editor: { preview: false }
     files:
       - name: site
@@ -42,7 +42,8 @@ collections:
           - { name: baseline, label: "Sous-titre à côté du logo", widget: string }
           - { name: description, label: "Description (Google et réseaux sociaux)", widget: text }
           - { name: url, label: "Adresse du site", widget: string }
-          - { name: logo, label: "Logo (carré, PNG ou SVG)", widget: image, required: false }
+          - { name: logo, label: "Logo (PNG à fond transparent de préférence)", widget: image, required: false }
+          - { name: afficher_nom, label: "Afficher aussi le nom de l'association à côté du logo", widget: boolean, default: false, required: false }
           - { name: email, label: "E-mail de contact", widget: string, required: false }
           - { name: telephone, label: "Téléphone", widget: string, required: false }
           - { name: adresse, label: "Adresse postale", widget: string }
@@ -140,7 +141,7 @@ collections:
 
   # ---------- 2. Nos actions ----------
   - name: actions
-    label: "Nos actions"
+    label: "Nos actions (FR)"
     label_singular: "action"
     folder: src/actions
     create: true
@@ -185,7 +186,7 @@ collections:
 
   # ---------- 4. Pages ----------
   - name: pages
-    label: "Pages"
+    label: "Pages (FR)"
     label_singular: "page"
     folder: src/pages
     create: true
@@ -197,4 +198,112 @@ collections:
       - { name: chapo, label: "Chapô (phrase d'introduction)", widget: text, required: false }
       - { name: image, label: "Photo d'en-tête", widget: image, required: false }
       - { name: ordre_menu, label: "Ordre", widget: number, value_type: int, default: 10, required: false }
+      - { name: body, label: "Contenu", widget: markdown }
+
+  # ================= VERSION KRÉOL =================
+  # Seuls les textes se traduisent ici : photos, liens, chiffres et ordre
+  # sont repris automatiquement de la version française.
+
+  - name: reglages_rc
+    label: "Lakèy an kréol (KR)"
+    editor: { preview: false }
+    files:
+      - name: accueil_rc
+        label: "Page d'accueil en créole"
+        file: src/_data/accueil_rc.json
+        fields:
+          - name: hero
+            label: "Bandeau d'ouverture"
+            widget: object
+            fields:
+              - { name: etiquette, label: "Petite étiquette", widget: string, required: false }
+              - { name: titre_ligne1, label: "Titre, ligne 1", widget: string, required: false }
+              - { name: titre_ligne2, label: "Titre, ligne 2 (début)", widget: string, required: false }
+              - { name: titre_accent, label: "Titre, ligne 2 (mot en couleur)", widget: string, required: false }
+              - { name: texte, label: "Texte d'introduction", widget: text, required: false }
+              - { name: photo_alt, label: "Description de la photo", widget: string, required: false }
+              - { name: encart_titre, label: "Encart : surtitre", widget: string, required: false }
+              - { name: encart_texte, label: "Encart : texte", widget: string, required: false }
+          - name: qui
+            label: "Bloc « Kisa nou lé »"
+            widget: object
+            fields:
+              - { name: titre, label: "Titre", widget: string, required: false }
+              - { name: texte, label: "Texte", widget: text, required: false }
+          - name: chiffres
+            label: "Libellés des chiffres clés (même ordre qu'en français)"
+            widget: list
+            summary: "{{fields.libelle}}"
+            fields:
+              - { name: libelle, label: "Libellé", widget: string }
+          - { name: mission_titre, label: "Titre de la section mission", widget: string, required: false }
+          - name: mission
+            label: "Les engagements (même ordre qu'en français)"
+            widget: list
+            summary: "{{fields.titre}}"
+            fields:
+              - { name: titre, label: "Titre", widget: string }
+              - { name: texte, label: "Texte", widget: text }
+          - name: lyceen
+            label: "Bloc « Ou lé o lisé ? »"
+            widget: object
+            fields:
+              - { name: titre, label: "Titre", widget: string, required: false }
+              - { name: texte, label: "Texte", widget: text, required: false }
+              - { name: bouton_candidature, label: "Texte du bouton de candidature", widget: string, required: false }
+              - name: tuiles
+                label: "Tuiles (même ordre qu'en français)"
+                widget: list
+                summary: "{{fields.titre}}"
+                fields:
+                  - { name: titre, label: "Titre", widget: string }
+                  - { name: texte, label: "Sous-texte", widget: string }
+          - name: soutenir
+            label: "Bloc « Soutenir »"
+            widget: object
+            fields:
+              - { name: titre, label: "Titre", widget: string, required: false }
+              - { name: texte, label: "Texte", widget: text, required: false }
+
+      - name: partenaires_rc
+        label: "Partenaires : titres en créole"
+        file: src/_data/partenaires_rc.json
+        fields:
+          - { name: titre, label: "Titre de la section", widget: string, required: false }
+          - { name: texte, label: "Texte d'accompagnement", widget: text, required: false }
+          - { name: lycees_titre, label: "Titre de la liste des lycées", widget: string, required: false }
+
+      - name: ui
+        label: "Textes des menus et boutons (FR + KR)"
+        file: src/_data/ui.json
+        fields:
+          - { name: fr, label: "Français", widget: object, collapsed: true, fields: [{ name: code_html, label: "fr", widget: string, required: false }, { name: langue, label: "Français", widget: string, required: false }, { name: autre_langue_court, label: "KR", widget: string, required: false }, { name: autre_langue_label, label: "Lir lo sit an kréol", widget: string, required: false }, { name: aller_contenu, label: "Aller au contenu", widget: string, required: false }, { name: ouvrir_menu, label: "Ouvrir le menu", widget: string, required: false }, { name: fermer_menu, label: "Fermer le menu", widget: string, required: false }, { name: accueil, label: "accueil", widget: string, required: false }, { name: menu_qui, label: "Qui sommes-nous", widget: string, required: false }, { name: menu_actions, label: "Nos actions", widget: string, required: false }, { name: menu_lyceen, label: "Espace lycéen", widget: string, required: false }, { name: menu_actus, label: "Restez informé", widget: string, required: false }, { name: menu_contact, label: "Contact", widget: string, required: false }, { name: adherer, label: "Adhérer", widget: string, required: false }, { name: faire_don, label: "Faire un don", widget: string, required: false }, { name: decouvrir_actions, label: "Découvrir nos actions", widget: string, required: false }, { name: tu_es_lyceen, label: "Tu es lycéen ? →", widget: string, required: false }, { name: qui_surtitre, label: "Qui sommes-nous ?", widget: string, required: false }, { name: notre_histoire, label: "Notre histoire →", widget: string, required: false }, { name: le_bureau, label: "Le bureau →", widget: string, required: false }, { name: nos_partenaires, label: "Nos partenaires →", widget: string, required: false }, { name: actions_surtitre, label: "Nos actions", widget: string, required: false }, { name: actions_titre, label: "Ce que nous faisons, concrètement", widget: string, required: false }, { name: projet_phare, label: "Projet phare", widget: string, required: false }, { name: decouvrir, label: "Découvrir →", widget: string, required: false }, { name: en_savoir_plus, label: "En savoir plus →", widget: string, required: false }, { name: idee_titre, label: "Une idée d'action ?", widget: string, required: false }, { name: idee_texte, label: "Établissement, collectivité ou association, construisons un projet ensemble.", widget: string, required: false }, { name: nous_ecrire, label: "Nous écrire →", widget: string, required: false }, { name: lyceen_surtitre, label: "Espace lycéen", widget: string, required: false }, { name: decouvre_espace, label: "Découvre l'espace lycéen", widget: string, required: false }, { name: actus_surtitre, label: "Restez informé", widget: string, required: false }, { name: actus_titre, label: "Actualités et presse", widget: string, required: false }, { name: toutes_actus, label: "Toutes les actualités →", widget: string, required: false }, { name: actus_chapo, label: "Actualités, articles de presse et communiqués.", widget: string, required: false }, { name: actus_note, label: "", widget: string, required: false }, { name: aucune_actu, label: "Aucune actualité pour le moment.", widget: string, required: false }, { name: filtrer, label: "Filtrer par catégorie", widget: string, required: false }, { name: tout, label: "Tout", widget: string, required: false }, { name: cat_evenement, label: "Événements", widget: string, required: false }, { name: cat_presse, label: "Vu dans la presse", widget: string, required: false }, { name: cat_intervention, label: "Nos interventions", widget: string, required: false }, { name: cat_communique, label: "Communiqués", widget: string, required: false }, { name: don_ligne, label: "Faire un don", widget: string, required: false }, { name: adherer_ligne, label: "Adhérer à l'association", widget: string, required: false }, { name: partenaire_ligne, label: "Devenir partenaire", widget: string, required: false }, { name: retour_actions, label: "← Nos actions", widget: string, required: false }, { name: retour_actus, label: "← Actualités", widget: string, required: false }, { name: lire_article, label: "Lire l'article complet →", widget: string, required: false }, { name: photo_a_ajouter, label: "Photo à ajouter", widget: string, required: false }, { name: pied_association, label: "L'association", widget: string, required: false }, { name: pied_partenaires, label: "Partenaires", widget: string, required: false }, { name: pied_soutenir, label: "Nous soutenir", widget: string, required: false }, { name: pied_contact, label: "Contact", widget: string, required: false }, { name: pied_ecrire, label: "Nous écrire", widget: string, required: false }, { name: pied_kit, label: "Kit presse", widget: string, required: false }, { name: pied_suivre, label: "Suivez-nous", widget: string, required: false }, { name: pied_loi, label: "Association loi 1901", widget: string, required: false }, { name: mentions, label: "Mentions légales", widget: string, required: false }, { name: actions_chapo, label: "Ce que nous faisons, concrètement.", widget: string, required: false }, { name: baseline, label: "Association loi 1901 · La Réunion", widget: string, required: false }, { name: description, label: "Association de jeunes réunionnais pour l'engagement citoyen et contre les discriminations, fondée en 2023 à Sainte-Clotilde.", widget: string, required: false }] }
+          - { name: rc, label: "Kréol", widget: object, collapsed: true, fields: [{ name: code_html, label: "fr", widget: string, required: false }, { name: langue, label: "Français", widget: string, required: false }, { name: autre_langue_court, label: "KR", widget: string, required: false }, { name: autre_langue_label, label: "Lir lo sit an kréol", widget: string, required: false }, { name: aller_contenu, label: "Aller au contenu", widget: string, required: false }, { name: ouvrir_menu, label: "Ouvrir le menu", widget: string, required: false }, { name: fermer_menu, label: "Fermer le menu", widget: string, required: false }, { name: accueil, label: "accueil", widget: string, required: false }, { name: menu_qui, label: "Qui sommes-nous", widget: string, required: false }, { name: menu_actions, label: "Nos actions", widget: string, required: false }, { name: menu_lyceen, label: "Espace lycéen", widget: string, required: false }, { name: menu_actus, label: "Restez informé", widget: string, required: false }, { name: menu_contact, label: "Contact", widget: string, required: false }, { name: adherer, label: "Adhérer", widget: string, required: false }, { name: faire_don, label: "Faire un don", widget: string, required: false }, { name: decouvrir_actions, label: "Découvrir nos actions", widget: string, required: false }, { name: tu_es_lyceen, label: "Tu es lycéen ? →", widget: string, required: false }, { name: qui_surtitre, label: "Qui sommes-nous ?", widget: string, required: false }, { name: notre_histoire, label: "Notre histoire →", widget: string, required: false }, { name: le_bureau, label: "Le bureau →", widget: string, required: false }, { name: nos_partenaires, label: "Nos partenaires →", widget: string, required: false }, { name: actions_surtitre, label: "Nos actions", widget: string, required: false }, { name: actions_titre, label: "Ce que nous faisons, concrètement", widget: string, required: false }, { name: projet_phare, label: "Projet phare", widget: string, required: false }, { name: decouvrir, label: "Découvrir →", widget: string, required: false }, { name: en_savoir_plus, label: "En savoir plus →", widget: string, required: false }, { name: idee_titre, label: "Une idée d'action ?", widget: string, required: false }, { name: idee_texte, label: "Établissement, collectivité ou association, construisons un projet ensemble.", widget: string, required: false }, { name: nous_ecrire, label: "Nous écrire →", widget: string, required: false }, { name: lyceen_surtitre, label: "Espace lycéen", widget: string, required: false }, { name: decouvre_espace, label: "Découvre l'espace lycéen", widget: string, required: false }, { name: actus_surtitre, label: "Restez informé", widget: string, required: false }, { name: actus_titre, label: "Actualités et presse", widget: string, required: false }, { name: toutes_actus, label: "Toutes les actualités →", widget: string, required: false }, { name: actus_chapo, label: "Actualités, articles de presse et communiqués.", widget: string, required: false }, { name: actus_note, label: "", widget: string, required: false }, { name: aucune_actu, label: "Aucune actualité pour le moment.", widget: string, required: false }, { name: filtrer, label: "Filtrer par catégorie", widget: string, required: false }, { name: tout, label: "Tout", widget: string, required: false }, { name: cat_evenement, label: "Événements", widget: string, required: false }, { name: cat_presse, label: "Vu dans la presse", widget: string, required: false }, { name: cat_intervention, label: "Nos interventions", widget: string, required: false }, { name: cat_communique, label: "Communiqués", widget: string, required: false }, { name: don_ligne, label: "Faire un don", widget: string, required: false }, { name: adherer_ligne, label: "Adhérer à l'association", widget: string, required: false }, { name: partenaire_ligne, label: "Devenir partenaire", widget: string, required: false }, { name: retour_actions, label: "← Nos actions", widget: string, required: false }, { name: retour_actus, label: "← Actualités", widget: string, required: false }, { name: lire_article, label: "Lire l'article complet →", widget: string, required: false }, { name: photo_a_ajouter, label: "Photo à ajouter", widget: string, required: false }, { name: pied_association, label: "L'association", widget: string, required: false }, { name: pied_partenaires, label: "Partenaires", widget: string, required: false }, { name: pied_soutenir, label: "Nous soutenir", widget: string, required: false }, { name: pied_contact, label: "Contact", widget: string, required: false }, { name: pied_ecrire, label: "Nous écrire", widget: string, required: false }, { name: pied_kit, label: "Kit presse", widget: string, required: false }, { name: pied_suivre, label: "Suivez-nous", widget: string, required: false }, { name: pied_loi, label: "Association loi 1901", widget: string, required: false }, { name: mentions, label: "Mentions légales", widget: string, required: false }, { name: actions_chapo, label: "Ce que nous faisons, concrètement.", widget: string, required: false }, { name: baseline, label: "Association loi 1901 · La Réunion", widget: string, required: false }, { name: description, label: "Association de jeunes réunionnais pour l'engagement citoyen et contre les discriminations, fondée en 2023 à Sainte-Clotilde.", widget: string, required: false }] }
+
+  - name: actions_rc
+    label: "Nout bann aksyon (KR)"
+    label_singular: "aksyon"
+    folder: src/rc/actions
+    create: true
+    slug: "{{slug}}"
+    identifier_field: titre
+    summary: "{{titre}}"
+    fields:
+      - { name: titre, label: "Titre en créole", widget: string, hint: "Le nom du fichier doit être identique à celui de la fiche française (ex. aril)." }
+      - { name: resume, label: "Résumé", widget: text }
+      - { name: image_alt, label: "Description de la photo", widget: string, required: false }
+      - { name: brouillon, label: "Brouillon (non publié)", widget: boolean, default: false, required: false }
+      - { name: body, label: "Présentation détaillée", widget: markdown }
+
+  - name: pages_rc
+    label: "Bann paz (KR)"
+    label_singular: "paz"
+    folder: src/rc/pages
+    create: true
+    slug: "{{slug}}"
+    identifier_field: titre
+    summary: "{{titre}}"
+    fields:
+      - { name: titre, label: "Titre", widget: string }
+      - { name: chapo, label: "Chapô", widget: text, required: false }
       - { name: body, label: "Contenu", widget: markdown }

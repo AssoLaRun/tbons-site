@@ -1,26 +1,36 @@
 ---
 layout: base.njk
-permalink: /
+pagination:
+  data: langues
+  size: 1
+  alias: lang
+permalink: "{{ '/' if lang == 'fr' else '/rc/' }}"
 ---
 {%- from "partials/macros.njk" import photo -%}
-{%- set h = accueil.hero -%}
+{%- set t = ui[lang] -%}
+{%- set A = accueil -%}
+{%- set K = accueil_rc if lang == 'rc' else accueil -%}
+{%- set P = partenaires_rc if lang == 'rc' else partenaires -%}
+{%- set h = A.hero -%}
+{%- set hk = K.hero or {} -%}
+{%- set les_actions = collections.actions_rc if lang == 'rc' else collections.actions -%}
 
 <section class="hero conteneur">
   <div class="hero__texte">
-    <span class="pastille">{{ h.etiquette }}</span>
-    <h1>{{ h.titre_ligne1 }}<br>{{ h.titre_ligne2 }} <span class="accent">{{ h.titre_accent }}</span></h1>
-    <p class="hero__chapo">{{ h.texte }}</p>
+    <span class="pastille">{{ hk.etiquette or h.etiquette }}</span>
+    <h1>{{ hk.titre_ligne1 or h.titre_ligne1 }}<br>{{ hk.titre_ligne2 or h.titre_ligne2 }} <span class="accent">{{ hk.titre_accent or h.titre_accent }}</span></h1>
+    <p class="hero__chapo">{{ hk.texte or h.texte }}</p>
     <div class="boutons">
-      <a class="bouton bouton--primaire" href="/actions/">Découvrir nos actions</a>
-      <a class="bouton bouton--contour" href="#lyceen">Tu es lycéen ? →</a>
+      <a class="bouton bouton--primaire" href="{{ '/actions/' | lien(lang) }}">{{ t.decouvrir_actions }}</a>
+      <a class="bouton bouton--contour" href="#lyceen">{{ t.tu_es_lyceen }}</a>
     </div>
   </div>
   <div class="hero__visuel">
-    {{ photo(h.photo, h.photo_alt, "Photo : les ambassadeurs ARIL, Grande Finale", "hero__photo") }}
-    {% if h.encart_titre %}
+    {{ photo(h.photo, hk.photo_alt or h.photo_alt, t.photo_a_ajouter, "hero__photo") }}
+    {% if hk.encart_titre or h.encart_titre %}
     <div class="hero__encart">
-      <span class="surtitre surtitre--clair">{{ h.encart_titre }}</span>
-      <span class="hero__encart-texte">{{ h.encart_texte }}</span>
+      <span class="surtitre surtitre--clair">{{ hk.encart_titre or h.encart_titre }}</span>
+      <span class="hero__encart-texte">{{ hk.encart_texte or h.encart_texte }}</span>
     </div>
     {% endif %}
   </div>
@@ -29,20 +39,20 @@ permalink: /
 <section class="bloc bloc--blanc" id="qui">
   <div class="conteneur qui">
     <div class="qui__titre">
-      <span class="surtitre">Qui sommes-nous ?</span>
-      <h2>{{ accueil.qui.titre }}</h2>
+      <span class="surtitre">{{ t.qui_surtitre }}</span>
+      <h2>{{ K.qui.titre or A.qui.titre }}</h2>
     </div>
     <div class="qui__corps">
-      <p class="grand-texte">{{ accueil.qui.texte }}</p>
+      <p class="grand-texte">{{ K.qui.texte or A.qui.texte }}</p>
       <div class="chiffres">
-        {% for c in accueil.chiffres %}
-        <div class="chiffre"><span class="chiffre__valeur">{{ c.valeur }}</span><span class="chiffre__libelle">{{ c.libelle }}</span></div>
+        {% for c in A.chiffres %}{% set ck = (K.chiffres or [])[loop.index0] or {} %}
+        <div class="chiffre"><span class="chiffre__valeur">{{ c.valeur }}</span><span class="chiffre__libelle">{{ ck.libelle or c.libelle }}</span></div>
         {% endfor %}
       </div>
       <div class="liens-fleches">
-        <a href="/qui-sommes-nous/">Notre histoire →</a>
-        <a href="/qui-sommes-nous/#le-bureau">Le bureau →</a>
-        <a href="#partenaires">Nos partenaires →</a>
+        <a href="{{ '/qui-sommes-nous/' | lien(lang) }}">{{ t.notre_histoire }}</a>
+        <a href="{{ '/qui-sommes-nous/' | lien(lang) }}">{{ t.le_bureau }}</a>
+        <a href="#partenaires">{{ t.nos_partenaires }}</a>
       </div>
     </div>
   </div>
@@ -50,9 +60,9 @@ permalink: /
 
 <section class="bloc">
   <div class="conteneur">
-    <h2 class="titre-section">{{ accueil.mission_titre }}</h2>
+    <h2 class="titre-section">{{ K.mission_titre or A.mission_titre }}</h2>
     <div class="grille grille--3">
-      {% for m in accueil.mission %}
+      {% for m0 in A.mission %}{% set mk = (K.mission or [])[loop.index0] or {} %}{% set m = {titre: mk.titre or m0.titre, texte: mk.texte or m0.texte} %}
       <div class="carte carte--pilier {% if loop.first %}carte--sombre{% endif %}">
         <span class="carte__numero">{{ "0" + loop.index }}</span>
         <h3>{{ m.titre }}</h3>
@@ -65,35 +75,35 @@ permalink: /
 
 <section class="bloc bloc--blanc" id="actions">
   <div class="conteneur">
-    <span class="surtitre">Nos actions</span>
-    <h2 class="titre-section">Ce que nous faisons, concrètement</h2>
+    <span class="surtitre">{{ t.actions_surtitre }}</span>
+    <h2 class="titre-section">{{ t.actions_titre }}</h2>
     <div class="grille grille--3 actions">
-      {% for a in collections.actions %}
+      {% for a in les_actions %}
         {% if a.data.phare %}
         <a class="action-phare" href="{{ a.url }}">
           <div class="action-phare__texte">
-            <span class="badge">Projet phare</span>
+            <span class="badge">{{ t.projet_phare }}</span>
             <h3>{{ a.data.titre }}</h3>
             <p>{{ a.data.resume }}</p>
-            <span class="lien-clair">Découvrir →</span>
+            <span class="lien-clair">{{ t.decouvrir }}</span>
           </div>
-          {{ photo(a.data.image, a.data.image_alt, "Photo à ajouter", "action-phare__photo") }}
+          {{ photo(a.data.image, a.data.image_alt, t.photo_a_ajouter, "action-phare__photo") }}
         </a>
         {% else %}
         <a class="carte carte--action" href="{{ a.url }}">
-          {{ photo(a.data.image, a.data.image_alt, "Visuel à ajouter", "carte__photo") }}
+          {{ photo(a.data.image, a.data.image_alt, t.photo_a_ajouter, "carte__photo") }}
           <div class="carte--action__texte">
             <h3>{{ a.data.titre }}</h3>
             <p>{{ a.data.resume }}</p>
-            <span class="lien">En savoir plus →</span>
+            <span class="lien">{{ t.en_savoir_plus }}</span>
           </div>
         </a>
         {% endif %}
       {% endfor %}
       <div class="carte carte--pointilles">
-        <h3>Une idée d'action ?</h3>
-        <p>Établissement, collectivité ou association, construisons un projet ensemble.</p>
-        <a class="lien" href="/contact/">Nous écrire →</a>
+        <h3>{{ t.idee_titre }}</h3>
+        <p>{{ t.idee_texte }}</p>
+        <a class="lien" href="{{ '/contact/' | lien(lang) }}">{{ t.nous_ecrire }}</a>
       </div>
     </div>
   </div>
@@ -102,19 +112,19 @@ permalink: /
 <section class="bloc bloc--teal" id="lyceen">
   <div class="conteneur lyceen">
     <div class="lyceen__texte">
-      <span class="surtitre surtitre--clair">Espace lycéen</span>
-      <h2 class="titre-geant">{{ accueil.lyceen.titre }}</h2>
-      <p class="grand-texte">{{ accueil.lyceen.texte }}</p>
+      <span class="surtitre surtitre--clair">{{ t.lyceen_surtitre }}</span>
+      <h2 class="titre-geant">{{ K.lyceen.titre or A.lyceen.titre }}</h2>
+      <p class="grand-texte">{{ K.lyceen.texte or A.lyceen.texte }}</p>
       <div class="boutons">
-        <a class="bouton bouton--creme" href="/espace-lyceen/">Découvre l'espace lycéen</a>
-        {% if accueil.lyceen.lien_candidature %}<a class="bouton bouton--contour-clair" href="{{ accueil.lyceen.lien_candidature }}">{{ accueil.lyceen.bouton_candidature }}</a>{% endif %}
+        <a class="bouton bouton--creme" href="{{ '/espace-lyceen/' | lien(lang) }}">{{ t.decouvre_espace }}</a>
+        {% if A.lyceen.lien_candidature %}<a class="bouton bouton--contour-clair" href="{{ A.lyceen.lien_candidature }}">{{ K.lyceen.bouton_candidature or A.lyceen.bouton_candidature }}</a>{% endif %}
       </div>
     </div>
     <div class="tuiles">
-      {% for t in accueil.lyceen.tuiles %}
-      <a class="tuile {% if t.mise_en_avant %}tuile--accent{% endif %}" href="{{ t.lien or '/espace-lyceen/' }}">
-        <span class="tuile__titre">{{ t.titre }}</span>
-        <span class="tuile__texte">{{ t.texte }}</span>
+      {% for tu in A.lyceen.tuiles %}{% set tk = (K.lyceen.tuiles or [])[loop.index0] or {} %}
+      <a class="tuile {% if tu.mise_en_avant %}tuile--accent{% endif %}" href="{{ (tu.lien or '/espace-lyceen/') | lien(lang) }}">
+        <span class="tuile__titre">{{ tk.titre or tu.titre }}</span>
+        <span class="tuile__texte">{{ tk.texte or tu.texte }}</span>
       </a>
       {% endfor %}
     </div>
@@ -124,8 +134,8 @@ permalink: /
 <section class="bloc" id="partenaires">
   <div class="conteneur">
     <div class="entete-section">
-      <h2 class="titre-section">{{ partenaires.titre }}</h2>
-      <p>{{ partenaires.texte }}</p>
+      <h2 class="titre-section">{{ P.titre or partenaires.titre }}</h2>
+      <p>{{ P.texte or partenaires.texte }}</p>
     </div>
     <div class="logos">
       {% for p in partenaires.partenaires %}
@@ -135,7 +145,7 @@ permalink: /
       {% endfor %}
     </div>
     {% if partenaires.lycees.length %}
-    <p class="petit-titre">{{ partenaires.lycees_titre }}</p>
+    <p class="petit-titre">{{ P.lycees_titre or partenaires.lycees_titre }}</p>
     <ul class="pastilles">
       {% for l in partenaires.lycees %}<li>{{ l }}</li>{% endfor %}
     </ul>
@@ -147,16 +157,16 @@ permalink: /
   <div class="conteneur">
     <div class="entete-section">
       <div>
-        <span class="surtitre">Restez informé</span>
-        <h2 class="titre-section">Actualités et presse</h2>
+        <span class="surtitre">{{ t.actus_surtitre }}</span>
+        <h2 class="titre-section">{{ t.actus_titre }}</h2>
       </div>
-      <a class="lien" href="/actualites/">Toutes les actualités →</a>
+      <a class="lien" href="{{ '/actualites/' | lien(lang) }}">{{ t.toutes_actus }}</a>
     </div>
     <div class="grille grille--3 actus">
       {% for n in collections.actualites | limit(3) %}
       <a class="actu" href="{{ n.data.lien_externe or n.url }}">
-        {{ photo(n.data.image, n.data.image_alt, "Photo", "actu__photo") }}
-        <span class="actu__meta">{{ n.data.categorie }} · {{ n.date | dateFr }}</span>
+        {{ photo(n.data.image, n.data.image_alt, t.photo_a_ajouter, "actu__photo") }}
+        <span class="actu__meta">{{ categories[lang][n.data.categorie] or n.data.categorie }} · {{ n.date | dateFr(lang) }}</span>
         <h3>{{ n.data.titre }}</h3>
       </a>
       {% endfor %}
@@ -168,13 +178,13 @@ permalink: /
   <div class="conteneur">
     <div class="soutenir">
       <div class="soutenir__texte">
-        <h2>{{ accueil.soutenir.titre }}</h2>
-        <p>{{ accueil.soutenir.texte }}</p>
+        <h2>{{ K.soutenir.titre or A.soutenir.titre }}</h2>
+        <p>{{ K.soutenir.texte or A.soutenir.texte }}</p>
       </div>
       <div class="soutenir__liens">
-        <a class="ligne-bouton ligne-bouton--accent" href="{{ site.lien_don or '/nous-soutenir/' }}"><span>Faire un don</span><span aria-hidden="true">→</span></a>
-        <a class="ligne-bouton" href="{{ site.lien_adhesion or '/nous-soutenir/#adherer' }}"><span>Adhérer à l'association</span><span aria-hidden="true">→</span></a>
-        <a class="ligne-bouton" href="/nous-soutenir/#devenir-partenaire"><span>Devenir partenaire</span><span aria-hidden="true">→</span></a>
+        <a class="ligne-bouton ligne-bouton--accent" href="{{ site.lien_don or ('/nous-soutenir/' | lien(lang)) }}"><span>{{ t.don_ligne }}</span><span aria-hidden="true">→</span></a>
+        <a class="ligne-bouton" href="{{ site.lien_adhesion or ('/nous-soutenir/' | lien(lang)) }}"><span>{{ t.adherer_ligne }}</span><span aria-hidden="true">→</span></a>
+        <a class="ligne-bouton" href="{{ '/nous-soutenir/' | lien(lang) }}"><span>{{ t.partenaire_ligne }}</span><span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>

@@ -2,16 +2,19 @@
 layout: base.njk
 ---
 {%- from "partials/macros.njk" import photo -%}
+{%- set t = ui[lang] -%}
+{%- set fr = collections.actions | selectattr("fileSlug", "equalto", page.fileSlug) | first -%}
+{%- set img = image or (fr.data.image if fr) -%}
 <article>
   <header class="page-entete">
     <div class="conteneur conteneur--etroit">
-      <a class="fil" href="/actions/">← Nos actions</a>
-      {% if phare %}<span class="badge">Projet phare</span>{% endif %}
+      <a class="fil" href="{{ '/actions/' | lien(lang) }}">{{ t.retour_actions }}</a>
+      {% if phare %}<span class="badge">{{ t.projet_phare }}</span>{% endif %}
       <h1>{{ titre }}</h1>
       <p class="grand-texte">{{ resume }}</p>
     </div>
   </header>
-  <div class="conteneur conteneur--etroit">{{ photo(image, image_alt, "Photo à ajouter", "page-photo") }}</div>
+  <div class="conteneur conteneur--etroit">{{ photo(img, image_alt, t.photo_a_ajouter, "page-photo") }}</div>
   <div class="conteneur conteneur--etroit prose">
     {{ content | safe }}
   </div>
