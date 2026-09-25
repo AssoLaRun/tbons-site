@@ -20,12 +20,12 @@
       "libelle": "Année de création"
     },
     {
-      "valeur": "[NB]",
-      "libelle": "Adhérents et bénévoles"
+      "valeur": "54",
+      "libelle": "Adhérents et bénévoles en 2026"
     },
     {
-      "valeur": "[NB]",
-      "libelle": "Jeunes accompagnés"
+      "valeur": "21",
+      "libelle": "Moyenne d'âge des bénévoles"
     }
   ],
   "mission_titre": "Notre mission, en trois engagements",
@@ -56,16 +56,10 @@
         "mise_en_avant": false
       },
       {
-        "titre": "Séminaire citoyen",
+        "titre": "Les Ambassadeurs 2026/2027",
         "texte": "Ateliers sur la gouvernance du territoire",
         "lien": "/espace-lyceen/",
-        "mise_en_avant": false
-      },
-      {
-        "titre": "Nos ressources",
-        "texte": "Fiches, guides, quiz citoyens",
-        "lien": "/espace-lyceen/",
-        "mise_en_avant": false
+        "mise_en_avant": true
       },
       {
         "titre": "Finale 2026",
