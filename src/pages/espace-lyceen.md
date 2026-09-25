@@ -1,5 +1,5 @@
 ---
-titre: Espace lycéen
+titre: ARIL
 chapo: Tout ce qu'il te faut pour devenir ambassadeur et prendre la parole.
 image: ""
 ordre_menu: 3

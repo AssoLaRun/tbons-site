@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "question": "Comment devenir adhérent ?",
+      "reponse": "Remplissez notre formulaire d'adhésion (bouton « Adhérer » en haut de page). Un membre de l'équipe vous recontacte dans les meilleurs délais pour un échange en visio, faire connaissance et répondre à vos questions. Tous les profils sont les bienvenus.",
+      "question_rc": "Koman rant dann lasosiasyon ?",
+      "reponse_rc": "Ranpli nout formilèr adézyon (bouton « Adéré » an o la paz). In moun dann lékip i rapèl aou vitman pou in vizio, fé konésans é réponn out bann késtyon. Tout profil lé byinvni."
+    },
+    {
+      "question": "Je suis journaliste, qui puis-je contacter ?",
+      "reponse": "Écrivez-nous via le formulaire ci-dessous en choisissant l'objet « Presse », ou directement à contact@tobeornot-subir.com. Pour le concours ARIL, le contact presse est ambassadeur.reunion@tobeornot-subir.com.",
+      "question_rc": "Mi lé jirnalis, kisa mi pé kontak ?",
+      "reponse_rc": "Ékri anou avèk lo formilèr an ba, swazi « Lapres », ousa dirèk si contact@tobeornot-subir.com. Pou lo konkour ARIL, lo kontak lapres sé ambassadeur.reunion@tobeornot-subir.com."
+    },
+    {
+      "question": "Mon lycée peut-il participer au concours ARIL ?",
+      "reponse": "Oui ! Les établissements intéressés peuvent nous écrire via le formulaire ci-dessous (objet « Concours ARIL ») pour connaître le calendrier et les modalités de la prochaine édition.",
+      "question_rc": "Mon lisé i pé partisip konkour ARIL ?",
+      "reponse_rc": "Wi ! Bann lékol i intérès i pé ékri anou avèk lo formilèr an ba (« Konkour ARIL ») pou konèt lo kalandrié é koman i fé pou lo prosin édisyon."
+    },
+    {
+      "question": "Comment soutenir l'association ou devenir partenaire ?",
+      "reponse": "Vous pouvez faire un don en ligne via HelloAsso (bouton « Faire un don »). Entreprises et institutions, écrivez-nous (objet « Partenariat ») pour construire un projet ensemble.",
+      "question_rc": "Koman soutenir lasosiasyon ousa vin parténèr ?",
+      "reponse_rc": "Ou pé fé in don si HelloAsso (bouton « Fé in don »). Bann antropriz ek zinstitisyon, ékri anou (« Parténarya ») pou mont in projé ansanm."
+    }
+  ]
+}

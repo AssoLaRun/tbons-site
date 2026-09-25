@@ -1,0 +1,17 @@
+{# Questions fréquentes (modifiables dans l'admin) #}
+{% if faq.questions.length %}
+<section class="faq" aria-labelledby="titre-faq">
+  <h2 id="titre-faq">{{ t.faq_titre }}</h2>
+  <p class="faq__intro">{{ t.faq_intro }}</p>
+  <div class="faq__liste">
+    {% for q in faq.questions %}
+    {% set qq = q.question_rc if (lang == 'rc' and q.question_rc) else q.question %}
+    {% set rr = q.reponse_rc if (lang == 'rc' and q.reponse_rc) else q.reponse %}
+    <details class="faq__item">
+      <summary><span>{{ qq }}</span><span class="faq__signe" aria-hidden="true"></span></summary>
+      <div class="faq__reponse">{{ rr | md | safe }}</div>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

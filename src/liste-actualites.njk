@@ -18,21 +18,24 @@ eleventyComputed:
     <div class="filtres" role="group" aria-label="{{ t.filtrer }}">
       <button type="button" class="filtre" aria-pressed="true" data-filtre="">{{ t.tout }}</button>
       <button type="button" class="filtre" aria-pressed="false" data-filtre="Événement">{{ t.cat_evenement }}</button>
-      <button type="button" class="filtre" aria-pressed="false" data-filtre="Presse">{{ t.cat_presse }}</button>
-      <button type="button" class="filtre" aria-pressed="false" data-filtre="Intervention">{{ t.cat_intervention }}</button>
       <button type="button" class="filtre" aria-pressed="false" data-filtre="Communiqué">{{ t.cat_communique }}</button>
+      <button type="button" class="filtre" aria-pressed="false" data-filtre="Presse">{{ t.cat_presse }}</button>
     </div>
   </div>
 </header>
 <div class="conteneur bloc--bas">
   <div class="grille grille--3 actus">
     {% for n in collections.actualites %}
-    <a class="actu" data-categorie="{{ n.data.categorie }}" href="{{ n.data.lien_externe or n.url }}">
-      {{ photo(n.data.image, n.data.image_alt, t.photo_a_ajouter, "actu__photo") }}
-      <span class="actu__meta">{{ categories[lang][n.data.categorie] or n.data.categorie }} · {{ n.date | dateFr(lang) }}</span>
-      <h3>{{ n.data.titre }}</h3>
-      {% if n.data.resume %}<p>{{ n.data.resume }}</p>{% endif %}
-    </a>
+    {% set evt = n.data.categorie == "Événement" %}
+    <article class="actu{% if evt %} actu--evenement{% endif %}" data-categorie="{{ n.data.categorie }}"{% if evt %} data-date="{{ n.date | isoDate }}"{% endif %}>
+      <a class="actu__lien" href="{{ n.data.lien_externe or n.url }}">
+        {{ photo(n.data.image, n.data.image_alt, t.photo_a_ajouter, "actu__photo") }}
+        <span class="actu__meta">{% if evt %}<span class="etiquette-evt" data-a-venir="{{ t.evt_a_venir }}" data-passe="{{ t.evt_passe }}">{{ t.evt_a_venir if (n.date | aVenir) else t.evt_passe }}</span> {% else %}{{ categories[lang][n.data.categorie] or n.data.categorie }} · {% endif %}{{ n.date | dateFr(lang) }}{% if evt and n.data.heure %} · {{ n.data.heure }}{% endif %}{% if evt and n.data.lieu %} · {{ n.data.lieu }}{% endif %}</span>
+        <h3>{{ n.data.titre }}</h3>
+        {% if n.data.resume %}<p>{{ n.data.resume }}</p>{% endif %}
+      </a>
+      {% if evt and n.data.lien_inscription %}<a class="bouton bouton--accent actu__inscription"{% if not (n.date | aVenir) %} hidden{% endif %} href="{{ n.data.lien_inscription }}">{{ t.evt_inscrire }}</a>{% endif %}
+    </article>
     {% else %}
     <p>{{ t.aucune_actu }}</p>
     {% endfor %}

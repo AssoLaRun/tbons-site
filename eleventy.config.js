@@ -4,9 +4,15 @@ const MOIS_RC = ["zanvié", "févrié", "mars", "avril", "mé", "zin", "zuyé", 
 
 export default function (eleventyConfig) {
   // Ancres automatiques sur les titres (ex. /nous-soutenir/#adherer)
-  eleventyConfig.amendLibrary("md", (md) =>
-    md.use(markdownItAnchor, { slugify: (s) => eleventyConfig.getFilter("slugify")(s) })
-  );
+  let mdLib;
+  eleventyConfig.amendLibrary("md", (md) => {
+    mdLib = md;
+    md.use(markdownItAnchor, { slugify: (s) => eleventyConfig.getFilter("slugify")(s) });
+  });
+  // Texte court avec mise en forme simple (gras, liens) : {{ texte | md | safe }}
+  eleventyConfig.addFilter("md", (txt) => (mdLib && txt ? mdLib.renderInline(String(txt)) : txt || ""));
+  // Un événement est-il à venir ? (au moment de la publication ; corrigé en direct par le script)
+  eleventyConfig.addFilter("aVenir", (d) => new Date(d).getTime() >= Date.now() - 24 * 3600 * 1000);
 
   // Fichiers copiés tels quels
   eleventyConfig.addPassthroughCopy("src/assets");

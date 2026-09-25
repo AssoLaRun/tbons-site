@@ -107,7 +107,7 @@ a:hover { color: var(--lagon-fonce); }
   .entete.est-ouvert .menu { display: flex; }
   .entete.est-ouvert .burger__ouvrir { display: none; }
   .entete.est-ouvert .burger__fermer { display: block; }
-  .menu__liens { flex-direction: column; gap: 0; }
+  .menu__liens { flex-direction: column; align-items: stretch; gap: 0; }
   .menu__liens a { display: block; padding: 16px 0; border-bottom: 1px solid var(--trait); font-family: var(--titres); font-size: 22px; font-weight: 700; }
   .menu__liens a[aria-current="page"] { color: var(--flamboyant); border-bottom-color: var(--trait); }
   .menu__boutons .bouton { flex: 1; min-height: 48px; font-size: 15px; }
@@ -202,7 +202,13 @@ a:hover { color: var(--lagon-fonce); }
 .pastilles li { padding: 10px 16px; border-radius: 999px; background: var(--sable-fonce); font-size: 14px; }
 
 /* ---------- Actualités ---------- */
-.actu { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--encre); }
+.actu, .actu__lien { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--encre); }
+.actu__lien:hover { color: var(--encre); }
+.actu__lien:hover h3 { text-decoration: underline; text-decoration-color: var(--secondaire); text-underline-offset: 4px; }
+.actu__inscription { align-self: flex-start; min-height: 44px; }
+.actu__inscription[hidden] { display: none; }
+.etiquette-evt { display: inline-block; padding: 3px 10px; margin-right: 4px; border-radius: 999px; background: var(--jaune); color: var(--encre); font-weight: 700; font-size: 12px; }
+.etiquette-evt.est-passe { background: var(--sable-fonce); color: var(--gris); }
 .actu:hover { color: var(--encre); }
 .actu:hover h3 { text-decoration: underline; text-decoration-color: var(--secondaire); text-underline-offset: 4px; }
 .actu__photo { height: 220px; border-radius: 20px; }
@@ -238,6 +244,22 @@ a:hover { color: var(--lagon-fonce); }
 .prose ul, .prose ol { padding-left: 1.3em; }
 .prose li + li { margin-top: .4em; }
 .prose strong { color: var(--encre); }
+
+/* ---------- FAQ (page contact) ---------- */
+.faq { margin-top: 2.2em; }
+.faq h2 { margin-top: 0; }
+.faq__intro { margin-top: .4em; }
+.faq__liste { margin-top: 1.2em; display: flex; flex-direction: column; gap: 10px; }
+.faq__item { background: var(--blanc); border: 1px solid var(--trait); border-radius: 16px; overflow: hidden; }
+.faq__item[open] { border-color: var(--lagon); }
+.faq__item summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; padding: 14px 20px; cursor: pointer; font-weight: 600; color: var(--encre); font-size: 16px; line-height: 1.4; }
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary:hover { color: var(--lagon); }
+.faq__signe { position: relative; flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--lagon-clair); }
+.faq__signe::before, .faq__signe::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; background: var(--encre); transform: translate(-50%, -50%); transition: transform .2s ease; }
+.faq__signe::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq__item[open] .faq__signe::after { transform: translate(-50%, -50%) rotate(0deg); }
+.faq__reponse { padding: 0 20px 18px; font-size: 15px; line-height: 1.65; color: var(--encre-douce); }
 
 /* ---------- Formulaire de contact ---------- */
 .formulaire { margin-top: 2em; padding: clamp(22px, 4vw, 36px); background: var(--blanc); border: 1px solid var(--trait); border-radius: var(--rayon); display: flex; flex-direction: column; gap: 18px; }

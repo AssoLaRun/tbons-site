@@ -24,6 +24,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Événements : masque l'inscription une fois la date passée
+  const aujourdhui = new Date(); aujourdhui.setHours(0, 0, 0, 0);
+  document.querySelectorAll(".actu--evenement[data-date]").forEach((el) => {
+    const passe = new Date(el.dataset.date + "T23:59:59") < aujourdhui;
+    const bouton = el.querySelector(".actu__inscription");
+    if (bouton) bouton.hidden = passe;
+    const etiquette = el.querySelector(".etiquette-evt");
+    if (etiquette) {
+      etiquette.textContent = passe ? etiquette.dataset.passe : etiquette.dataset.aVenir;
+      etiquette.classList.toggle("est-passe", passe);
+    }
+  });
+
   // Carrousel du bureau
   const piste = document.querySelector(".bureau__piste");
   if (piste) {

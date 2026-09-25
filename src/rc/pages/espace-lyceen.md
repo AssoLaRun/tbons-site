@@ -1,5 +1,5 @@
 ---
-titre: Pou bann lisé
+titre: ARIL
 chapo: Tout sak i fo pou ou vin anbasadèr é pran la parol.
 ---
 ## Lo konkour ARIL

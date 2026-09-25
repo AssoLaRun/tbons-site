@@ -7,7 +7,7 @@ layout: base.njk
   <header class="page-entete">
     <div class="conteneur conteneur--etroit">
       <a class="fil" href="{{ '/actualites/' | lien(lang) }}">{{ t.retour_actus }}</a>
-      <span class="actu__meta">{{ categorie }} · <time datetime="{{ page.date | isoDate }}">{{ page.date | dateFr(lang) }}</time></span>
+      <span class="actu__meta">{{ categories[lang][categorie] or categorie }} · <time datetime="{{ page.date | isoDate }}">{{ page.date | dateFr(lang) }}</time>{% if heure %} · {{ heure }}{% endif %}{% if lieu %} · {{ lieu }}{% endif %}</span>
       <h1>{{ titre }}</h1>
       {% if resume %}<p class="grand-texte">{{ resume }}</p>{% endif %}
     </div>
@@ -15,6 +15,7 @@ layout: base.njk
   {% if image %}<div class="conteneur conteneur--etroit">{{ photo(image, image_alt, "", "page-photo") }}</div>{% endif %}
   <div class="conteneur conteneur--etroit prose">
     {{ content | safe }}
+    {% if categorie == "Événement" and lien_inscription %}<p class="actu--evenement" data-date="{{ page.date | isoDate }}"><a class="bouton bouton--accent actu__inscription"{% if not (page.date | aVenir) %} hidden{% endif %} href="{{ lien_inscription }}">{{ t.evt_inscrire }}</a></p>{% endif %}
     {% if lien_externe %}<p><a class="bouton bouton--primaire" href="{{ lien_externe }}">{{ t.lire_article }}</a></p>{% endif %}
   </div>
 </article>

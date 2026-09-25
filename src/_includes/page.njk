@@ -13,7 +13,7 @@ layout: base.njk
   {% if image %}<div class="conteneur conteneur--etroit">{{ photo(image, titre, "", "page-photo") }}</div>{% endif %}
   <div class="conteneur conteneur--etroit prose">
     {{ content | safe }}
-    {% if page.fileSlug == "contact" %}{% include "partials/formulaire.njk" %}{% endif %}
+    {% if page.fileSlug == "contact" %}{% include "partials/faq.njk" %}{% include "partials/formulaire.njk" %}{% endif %}
   </div>
   {% if page.fileSlug == "qui-sommes-nous" %}
     {% if bureau.membres.length %}{% include "partials/bureau.njk" %}{% endif %}
