@@ -19,6 +19,10 @@ backend:
 # local_backend: true
 
 locale: fr
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
 site_url: https://tobeornot-subir.com
 display_url: https://tobeornot-subir.com
 logo_url: ""
