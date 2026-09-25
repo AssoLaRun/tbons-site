@@ -20,6 +20,7 @@
     </div>
     <nav id="menu" class="menu" aria-label="Navigation">
       <ul class="menu__liens">
+        <li><a class="menu__accueil" href="{{ racine }}" {% if url == racine %}aria-current="page"{% endif %}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>{{ t.menu_accueil }}</a></li>
         <li><a href="{{ '/qui-sommes-nous/' | lien(lang) }}" {% if "/qui-sommes-nous/" in url %}aria-current="page"{% endif %}>{{ t.menu_qui }}</a></li>
         <li><a href="{{ '/actions/' | lien(lang) }}" {% if "/actions/" in url %}aria-current="page"{% endif %}>{{ t.menu_actions }}</a></li>
         <li><a href="{{ '/espace-lyceen/' | lien(lang) }}" {% if "/espace-lyceen/" in url %}aria-current="page"{% endif %}>{{ t.menu_lyceen }}</a></li>

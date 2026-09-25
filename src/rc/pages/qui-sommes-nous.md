@@ -8,10 +8,6 @@ To Be or Not Subir (TBONS) sé in lasosiasyon lwa 1901 kréé an 2023 Sint-Kloti
 
 [Pou konplété.]
 
-## Lo biro
-
-[Pou konplété : non ek rol bann manm lo biro.]
-
 ## Nout bann parténèr
 
 [Pou konplété.]

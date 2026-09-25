@@ -15,4 +15,8 @@ layout: base.njk
     {{ content | safe }}
     {% if page.fileSlug == "contact" %}{% include "partials/formulaire.njk" %}{% endif %}
   </div>
+  {% if page.fileSlug == "qui-sommes-nous" %}
+    {% if bureau.membres.length %}{% include "partials/bureau.njk" %}{% endif %}
+    <div class="conteneur conteneur--etroit bloc--bas">{% include "partials/documents-raccourci.njk" %}</div>
+  {% endif %}
 </article>

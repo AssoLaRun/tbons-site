@@ -10,10 +10,6 @@ To Be or Not Subir (TBONS) est une association loi 1901 fondée en 2023 à Saint
 
 [À compléter.]
 
-## Le bureau
-
-[À compléter : noms et rôles des membres du bureau.]
-
 ## Nos partenaires
 
 [À compléter.]

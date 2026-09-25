@@ -23,4 +23,43 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // Carrousel du bureau
+  const piste = document.querySelector(".bureau__piste");
+  if (piste) {
+    const membres = [...piste.querySelectorAll(".membre")];
+    const pas = () => (membres[0] ? membres[0].getBoundingClientRect().width + 20 : 320);
+    const prec = document.querySelector('[data-bureau="prec"]');
+    const suiv = document.querySelector('[data-bureau="suiv"]');
+    const maj = () => {
+      if (prec) prec.disabled = piste.scrollLeft < 8;
+      if (suiv) suiv.disabled = piste.scrollLeft + piste.clientWidth > piste.scrollWidth - 8;
+    };
+    prec && prec.addEventListener("click", () => piste.scrollBy({ left: -pas() }));
+    suiv && suiv.addEventListener("click", () => piste.scrollBy({ left: pas() }));
+    piste.addEventListener("scroll", maj, { passive: true });
+    window.addEventListener("resize", maj);
+    maj();
+    membres.forEach((m) => {
+      const carte = m.querySelector(".membre__carte");
+      const detail = m.querySelector(".membre__detail");
+      if (!detail) return;
+      carte.addEventListener("click", () => {
+        const ouvrir = !m.classList.contains("est-ouvert");
+        membres.forEach((x) => {
+          x.classList.remove("est-ouvert");
+          const d = x.querySelector(".membre__detail");
+          if (d) d.hidden = true;
+          x.querySelector(".membre__carte").setAttribute("aria-expanded", "false");
+        });
+        if (ouvrir) {
+          m.classList.add("est-ouvert");
+          detail.hidden = false;
+          carte.setAttribute("aria-expanded", "true");
+          m.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+        }
+        maj();
+      });
+    });
+  }
 });

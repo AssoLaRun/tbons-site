@@ -1,0 +1,40 @@
+{# Carrousel des membres du bureau : glisser pour défiler, cliquer pour lire la présentation #}
+<section class="bureau" aria-labelledby="titre-bureau">
+  <div class="conteneur bureau__entete">
+    <div>
+      <h2 id="titre-bureau">{{ bureau.titre_rc if (lang == 'rc' and bureau.titre_rc) else bureau.titre }}</h2>
+      {% set intro = bureau.intro_rc if (lang == 'rc' and bureau.intro_rc) else bureau.intro %}
+      {% if intro %}<p>{{ intro }}</p>{% endif %}
+    </div>
+    <div class="bureau__fleches">
+      <button type="button" class="fleche" data-bureau="prec" aria-label="{{ t.bureau_precedent }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="fleche" data-bureau="suiv" aria-label="{{ t.bureau_suivant }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div>
+  <ul class="bureau__piste" role="list">
+    {% for m in bureau.membres %}
+    {% set fonction = m.fonction_rc if (lang == 'rc' and m.fonction_rc) else m.fonction %}
+    {% set texte = m.texte_rc if (lang == 'rc' and m.texte_rc) else m.texte %}
+    <li class="membre">
+      <button type="button" class="membre__carte" aria-expanded="false" aria-controls="membre-{{ loop.index }}" {% if not texte %}disabled{% endif %}>
+        <span class="membre__photo">
+          {% if m.photo %}<img src="{{ m.photo }}" alt="" loading="lazy">{% else %}<span class="membre__initiale" aria-hidden="true">{{ m.nom | first if m.nom[0] != "[" else "?" }}</span>{% endif %}
+        </span>
+        <span class="membre__legende">
+          <span class="membre__nom">{{ m.nom }}</span>
+          <span class="membre__fonction">{{ fonction }}</span>
+        </span>
+        {% if texte %}<span class="membre__plus" aria-hidden="true">+</span>{% endif %}
+        <span class="sr-only">{{ t.bureau_lire }} {{ m.nom }}</span>
+      </button>
+      {% if texte %}
+      <div class="membre__detail" id="membre-{{ loop.index }}" hidden>
+        <p class="membre__texte">{{ texte }}</p>
+        <p class="membre__nom-detail">{{ m.nom }}</p>
+        <p class="membre__fonction-detail">{{ fonction }}</p>
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>

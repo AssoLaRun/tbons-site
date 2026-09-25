@@ -1,0 +1,12 @@
+{
+  "titre": "Le bureau",
+  "titre_rc": "Lo biro",
+  "intro": "Les bénévoles qui font vivre l'association au quotidien.",
+  "intro_rc": "Bann bénévol i fé viv lasosiasyon toulézour.",
+  "membres": [
+    { "nom": "[Prénom Nom]", "fonction": "Présidente / Président", "fonction_rc": "Prézidan", "photo": "", "texte": "[Quelques lignes de présentation : parcours, rôle dans l'association, ce qui l'anime.]", "texte_rc": "" },
+    { "nom": "[Prénom Nom]", "fonction": "Secrétaire général", "fonction_rc": "Sékrétèr zénéral", "photo": "", "texte": "[Quelques lignes de présentation.]", "texte_rc": "" },
+    { "nom": "[Prénom Nom]", "fonction": "Trésorière / Trésorier", "fonction_rc": "Trézoryé", "photo": "", "texte": "[Quelques lignes de présentation.]", "texte_rc": "" },
+    { "nom": "[Prénom Nom]", "fonction": "Vice-présidente / Vice-président", "fonction_rc": "Vis-prézidan", "photo": "", "texte": "[Quelques lignes de présentation.]", "texte_rc": "" }
+  ]
+}

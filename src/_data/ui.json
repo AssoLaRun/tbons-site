@@ -76,11 +76,19 @@
     "docs_titre": "Documents officiels",
     "docs_chapo": "Statuts, procès-verbaux d'assemblée générale, rapports et bilans de l'association.",
     "docs_aucun": "Aucun document pour le moment.",
-    "docs_telecharger": "Télécharger"
+    "docs_telecharger": "Télécharger",
+    "menu_accueil": "Accueil",
+    "docs_raccourci_titre": "Nos documents officiels",
+    "docs_raccourci_texte": "Statuts, procès-verbaux d'assemblée générale, rapports d'activité et bilans : tout est en libre consultation.",
+    "docs_raccourci_bouton": "Consulter les documents →",
+    "bureau_precedent": "Membre précédent",
+    "bureau_suivant": "Membre suivant",
+    "bureau_lire": "Lire la présentation de",
+    "bureau_fermer": "Refermer"
   },
   "rc": {
     "code_court": "RE",
-    "drapeau": "/assets/img/drapeau-reunion.svg",
+    "drapeau": "",
     "code_html": "rcf",
     "langue": "Kréol",
     "autre_langue_label": "Lire le site en français",
@@ -155,6 +163,14 @@
     "docs_titre": "Bann dokiman ofisyèl",
     "docs_chapo": "Bann statu, PV lasanblé zénéral, rapor ek bilan lasosiasyon.",
     "docs_aucun": "Pwin dokiman pou lo moman.",
-    "docs_telecharger": "Téléshars"
+    "docs_telecharger": "Téléshars",
+    "menu_accueil": "Lakèy",
+    "docs_raccourci_titre": "Nout bann dokiman ofisyèl",
+    "docs_raccourci_texte": "Statu, PV lasanblé zénéral, rapor d'aktivité ek bilan : tout lé la pou gèt.",
+    "docs_raccourci_bouton": "Gèt bann dokiman →",
+    "bureau_precedent": "Manm avan",
+    "bureau_suivant": "Manm apré",
+    "bureau_lire": "Lir la prézantasyon",
+    "bureau_fermer": "Ferm"
   }
 }
