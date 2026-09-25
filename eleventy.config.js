@@ -56,6 +56,7 @@ export default function (eleventyConfig) {
     if (lang === "rc") return `${x.getUTCDate()} ${MOIS_RC[x.getUTCMonth()]} ${x.getUTCFullYear()}`;
     return x.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
   });
+  eleventyConfig.addFilter("encodeUri", (u) => encodeURI(u || ""));
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString().slice(0, 10));
   eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
 
