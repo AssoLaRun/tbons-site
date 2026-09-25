@@ -4,9 +4,37 @@
   "intro": "Les bénévoles qui font vivre l'association au quotidien.",
   "intro_rc": "Bann bénévol i fé viv lasosiasyon toulézour.",
   "membres": [
-    { "nom": "[Prénom Nom]", "fonction": "Présidente / Président", "fonction_rc": "Prézidan", "photo": "", "texte": "[Quelques lignes de présentation : parcours, rôle dans l'association, ce qui l'anime.]", "texte_rc": "" },
-    { "nom": "[Prénom Nom]", "fonction": "Secrétaire général", "fonction_rc": "Sékrétèr zénéral", "photo": "", "texte": "[Quelques lignes de présentation.]", "texte_rc": "" },
-    { "nom": "[Prénom Nom]", "fonction": "Trésorière / Trésorier", "fonction_rc": "Trézoryé", "photo": "", "texte": "[Quelques lignes de présentation.]", "texte_rc": "" },
-    { "nom": "[Prénom Nom]", "fonction": "Vice-présidente / Vice-président", "fonction_rc": "Vis-prézidan", "photo": "", "texte": "[Quelques lignes de présentation.]", "texte_rc": "" }
+    {
+      "nom": "Jody NANOU",
+      "fonction": "Président-fondateur",
+      "fonction_rc": "Prézidan-fondatèr",
+      "photo": "/assets/img/uploads/img_9951.jpeg",
+      "texte": "Jody a fondé To Be or Not Subir en 2023 avec une conviction forte : une blessure peut devenir une force. Révélé au grand public par Kid Créole puis The Voice Kids, il a lui-même connu le harcèlement scolaire, et c'est ce vécu qui nourrit son engagement. À la tête de l'association, il porte le concours Ambassadeur Réunion Inter-Lycée (ARIL), qu'il a vu grandir jusqu'à s'ouvrir à l'île Maurice. Son moteur : rapprocher la jeunesse réunionnaise des institutions et lui donner les moyens de prendre la parole.",
+      "texte_rc": "Jody la kréé To Be or Not Subir an 2023 avèk in gro konviksyon : in blésir i pé vin in fors. Lo moun la konèt ali avèk Kid Créole é The Voice Kids. Li minm la subi lo harsèlman lékol, é sé sa i pous ali anvolv ali. Ansanm ek lasosiasyon, li port lo konkour ARIL, la grandi ziska Moris. Sak i fé avans ali : rapros la zénès rényonèz bann zinstitisyon é done ali lo moyin pran la parol."
+    },
+    {
+      "nom": "Kyllian de la MICHELLERIE--HOAREAU",
+      "fonction": "Secrétaire général",
+      "fonction_rc": "Sékrétèr zénéral",
+      "photo": "/assets/img/uploads/9f2759b0-8cde-454c-9095-19f5078bcf0d.jpg",
+      "texte": "Réunionnais, Kyllian a très tôt fait de l'engagement citoyen un fil conducteur. Élu au sein des instances représentatives lycéennes (CVL, puis CAVL), il a poursuivi ce chemin à Sciences Po Paris, où il a obtenu sa licence avant d'entamer un master en politiques publiques. Profondément attaché au service public, il s'engage au sein de TBONS pour que chaque jeune puisse trouver sa place, comme lui a su trouver la sienne.",
+      "texte_rc": "Kyllian sé in Rényoné, é dopi tanzantan langazman sitoyin i gid ali. Li té élu dann bann linstans lisétyin (CVL, apré CAVL), é li la kontinyé son shemin Sciences Po Paris, kote li la gingn son lisans avan komans in mastèr an politik piblik. Li tien for o sèrvis piblik, é dann TBONS li anvolv ali pou ké sak zénes i trouv son plas, kom li la trouv la sienn."
+    },
+    {
+      "nom": "[Prénom Nom]",
+      "fonction": "Trésorière / Trésorier",
+      "fonction_rc": "Trézoryé",
+      "photo": "",
+      "texte": "[Quelques lignes de présentation.]",
+      "texte_rc": ""
+    },
+    {
+      "nom": "[Prénom Nom]",
+      "fonction": "Vice-présidente / Vice-président",
+      "fonction_rc": "Vis-prézidan",
+      "photo": "",
+      "texte": "[Quelques lignes de présentation.]",
+      "texte_rc": ""
+    }
   ]
 }
