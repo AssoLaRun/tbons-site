@@ -9,7 +9,31 @@
   <meta name="description" content="{{ resume or chapo or t.description }}">
   <meta property="og:title" content="{{ titre or site.nom }}">
   <meta property="og:description" content="{{ resume or chapo or t.description }}">
-  {% if image %}<meta property="og:image" content="{{ site.url }}{{ image }}">{% endif %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.nom }}">
+  <meta property="og:locale" content="{{ 'fr_FR' if lang == 'fr' else 'fr_RE' }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ image or accueil.hero.photo or site.logo }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{{ site.logo or '/assets/img/favicon.png' }}">
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": {{ site.nom | dump | safe }},
+    "alternateName": "TBONS",
+    "url": {{ site.url | dump | safe }},
+    "logo": {{ (site.url + site.logo) | dump | safe }},
+    "description": {{ site.description | dump | safe }},
+    "foundingDate": "2023",
+    "email": {{ site.email | dump | safe }},
+    "address": { "@type": "PostalAddress", "streetAddress": "22 route de Moufia", "postalCode": "97490", "addressLocality": "Saint-Denis", "addressRegion": "La Réunion", "addressCountry": "FR" },
+    "sameAs": [{% set sep = joiner(",") %}{% for l in [site.instagram, site.facebook, site.linkedin] %}{% if l %}{{ sep() }}{{ l | dump | safe }}{% endif %}{% endfor %}]
+  }
+  </script>
+  {% endif %}
   <link rel="alternate" hreflang="{{ 'rcf' if lang == 'fr' else 'fr' }}" href="{{ page.url | autreLangue(lang, collections.all) }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
