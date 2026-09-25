@@ -2,13 +2,37 @@
   "titre": "Ils nous font confiance",
   "texte": "Institutions, associations et établissements qui soutiennent nos projets.",
   "partenaires": [
-    { "nom": "Préfecture de La Réunion", "logo": "", "lien": "" },
-    { "nom": "Région Réunion", "logo": "", "lien": "" },
-    { "nom": "Département de La Réunion", "logo": "", "lien": "" },
-    { "nom": "CDJ 974", "logo": "", "lien": "" },
-    { "nom": "PRJIO", "logo": "", "lien": "" },
-    { "nom": "ASFA – Hôpital d'Enfants", "logo": "", "lien": "" }
+    {
+      "nom": "Préfecture de La Réunion",
+      "logo": "/assets/img/uploads/préfet_de_la_région_réunion.svg.webp",
+      "lien": ""
+    },
+    {
+      "nom": "Crédit Agricole Réunion Mayotte",
+      "logo": "/assets/img/uploads/créditagricole-réunion-mayotte.jpeg"
+    },
+    {
+      "nom": "Ville de Saint-Denis",
+      "logo": "/assets/img/uploads/logo-ville-de-saint-denis_-002.jpg"
+    },
+    {
+      "nom": "Info Jeunes Réunion",
+      "logo": "/assets/img/uploads/infosjeunes.png"
+    },
+    {
+      "nom": "ASFA – Hôpital d'Enfants",
+      "logo": "/assets/img/uploads/structures_photo_logo_4703.gif",
+      "lien": ""
+    }
   ],
   "lycees_titre": "Lycées participants au concours ARIL",
-  "lycees": ["[Lycée 1]", "[Lycée 2]", "[Lycée 3]", "[Lycée 4]", "[Lycée 5]", "[Lycée 6]", "[Lycée 7]"]
+  "lycees": [
+    "Lycée Georges Brassens",
+    "Lycée Leconte de Lisle",
+    "Lycée Levavasseur",
+    "Lycée P. Pignolet de Fresne Rivière",
+    "Lycée Ambroise Vollard",
+    "Lycée Jean Hinglo",
+    "Lycée Paul Moreau"
+  ]
 }
