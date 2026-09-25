@@ -4,4 +4,4 @@ chapo: Une question, une idée de projet, une demande presse ?
 image: ""
 ordre_menu: 6
 ---
-Écrivez-nous à l'adresse indiquée en bas de page. [À compléter : formulaire ou coordonnées détaillées.]
+Écrivez-nous via le formulaire ci-dessous, ou directement à contact@tobeornot-subir.com. Nous répondons en général sous quelques jours.

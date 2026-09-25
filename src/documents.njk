@@ -1,0 +1,46 @@
+---
+layout: base.njk
+pagination:
+  data: langues
+  size: 1
+  alias: lang
+permalink: "{{ '/documents/' if lang == 'fr' else '/rc/documents/' }}"
+eleventyComputed:
+  titre: "{{ ui[lang].docs_titre }}"
+  chapo: "{{ ui[lang].docs_chapo }}"
+---
+{%- set t = ui[lang] -%}
+<header class="page-entete">
+  <div class="conteneur conteneur--etroit">
+    <h1>{{ t.docs_titre }}</h1>
+    <p class="grand-texte">{{ t.docs_chapo }}</p>
+  </div>
+</header>
+<div class="conteneur conteneur--etroit bloc--bas docs">
+  {% set total = 0 %}
+  {% for c in documents.categories %}
+    {% set liste = [] %}
+    {% for d in collections.documents %}{% if d.data.categorie == c.nom %}{% set liste = (liste.push(d), liste) %}{% endif %}{% endfor %}
+    {% if liste.length %}
+    {% set total = total + liste.length %}
+    <section class="docs__groupe">
+      <h2>{{ c.nom_rc if (lang == 'rc' and c.nom_rc) else c.nom }}</h2>
+      <ul class="docs__liste">
+        {% for d in liste %}
+        <li>
+          <a class="doc" href="{{ d.data.fichier }}" download>
+            <span class="doc__icone" aria-hidden="true">{{ d.data.fichier | extension }}</span>
+            <span class="doc__texte">
+              <span class="doc__titre">{{ d.data.titre }}</span>
+              <span class="doc__meta">{{ d.date | dateFr(lang) }}{% if d.data.description %} · {{ d.data.description }}{% endif %}</span>
+            </span>
+            <span class="doc__action">{{ t.docs_telecharger }} ↓</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  {% endfor %}
+  {% if total == 0 %}<p>{{ t.docs_aucun }}</p>{% endif %}
+</div>

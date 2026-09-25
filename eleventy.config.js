@@ -36,6 +36,10 @@ export default function (eleventyConfig) {
       })
       .sort(trier);
   });
+  eleventyConfig.addCollection("documents", (api) =>
+    api.getFilteredByGlob("src/documents/*.md").filter(publie).sort((a, b) => b.date - a.date)
+  );
+  eleventyConfig.addFilter("extension", (f) => ((f || "").split(".").pop() || "").toUpperCase());
   eleventyConfig.addCollection("actualites", (api) =>
     api.getFilteredByGlob("src/actualites/*.md").filter(publie).sort((a, b) => b.date - a.date)
   );

@@ -1,8 +1,9 @@
 {
   "fr": {
+    "code_court": "FR",
+    "drapeau": "",
     "code_html": "fr",
     "langue": "Français",
-    "autre_langue_court": "KR",
     "autre_langue_label": "Lir lo sit an kréol",
     "aller_contenu": "Aller au contenu",
     "ouvrir_menu": "Ouvrir le menu",
@@ -61,12 +62,27 @@
     "mentions": "Mentions légales",
     "actions_chapo": "Ce que nous faisons, concrètement.",
     "baseline": "Association loi 1901 · La Réunion",
-    "description": "Association de jeunes réunionnais pour l'engagement citoyen et contre les discriminations, fondée en 2023 à Sainte-Clotilde."
+    "description": "Association de jeunes réunionnais pour l'engagement citoyen et contre les discriminations, fondée en 2023 à Sainte-Clotilde.",
+    "form_nom": "Nom et prénom",
+    "form_email": "Adresse e-mail",
+    "form_objet": "Objet",
+    "form_message": "Votre message",
+    "form_objets": "Question générale, Partenariat, Presse, Adhésion ou bénévolat, Concours ARIL, Autre",
+    "form_rgpd": "J'accepte que mes informations soient utilisées pour me répondre.",
+    "form_envoyer": "Envoyer le message",
+    "form_merci_titre": "Merci, votre message est bien parti !",
+    "form_merci_texte": "Nous vous répondrons au plus vite, en général sous quelques jours.",
+    "form_retour": "← Retour à l'accueil",
+    "docs_titre": "Documents officiels",
+    "docs_chapo": "Statuts, procès-verbaux d'assemblée générale, rapports et bilans de l'association.",
+    "docs_aucun": "Aucun document pour le moment.",
+    "docs_telecharger": "Télécharger"
   },
   "rc": {
+    "code_court": "RE",
+    "drapeau": "/assets/img/drapeau-reunion.svg",
     "code_html": "rcf",
     "langue": "Kréol",
-    "autre_langue_court": "FR",
     "autre_langue_label": "Lire le site en français",
     "aller_contenu": "Al drwat o kontni",
     "ouvrir_menu": "Ouvèr lo méni",
@@ -125,6 +141,20 @@
     "mentions": "Mansyon légal",
     "actions_chapo": "Sak nou fé, pou de vré.",
     "baseline": "Lasosiasyon lwa 1901 · La Rényon",
-    "description": "Lasosiasyon bann zénes rényoné pou langazman sitoyin é kont bann diskriminasyon, kréé an 2023 Sint-Klotild."
+    "description": "Lasosiasyon bann zénes rényoné pou langazman sitoyin é kont bann diskriminasyon, kréé an 2023 Sint-Klotild.",
+    "form_nom": "Non ek prénon",
+    "form_email": "Ladrès e-mail",
+    "form_objet": "Pou kosa",
+    "form_message": "Out mésaz",
+    "form_objets": "Késtyon zénéral, Parténarya, Lapres, Adézyon ousa bénévola, Konkour ARIL, Ot shoz",
+    "form_rgpd": "Mi lé dakor zot i sèrv mon bann linformasyon pou réponn amwin.",
+    "form_envoyer": "Anvwar lo mésaz",
+    "form_merci_titre": "Mersi, out mésaz la bien parti !",
+    "form_merci_texte": "Nou sar réponn aou vitman, an zénéral dann kèk zour.",
+    "form_retour": "← Rotourn lakèy",
+    "docs_titre": "Bann dokiman ofisyèl",
+    "docs_chapo": "Bann statu, PV lasanblé zénéral, rapor ek bilan lasosiasyon.",
+    "docs_aucun": "Pwin dokiman pou lo moman.",
+    "docs_telecharger": "Téléshars"
   }
 }

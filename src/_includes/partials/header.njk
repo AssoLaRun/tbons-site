@@ -11,7 +11,7 @@
     </a>
     <div class="entete__droite">
       <a class="langue" href="{{ url | autreLangue(lang, collections.all) }}" hreflang="{{ 'rcf' if lang == 'fr' else 'fr' }}" aria-label="{{ t.autre_langue_label }}" title="{{ t.autre_langue_label }}">
-        <span class="langue__opt {% if lang == 'fr' %}est-active{% endif %}">FR</span><span class="langue__opt {% if lang == 'rc' %}est-active{% endif %}">KR</span>
+        {% for l in langues %}<span class="langue__opt {% if lang == l %}est-active{% endif %}">{% if ui[l].drapeau %}<img class="langue__drapeau" src="{{ ui[l].drapeau }}" alt="">{% endif %}{{ ui[l].code_court }}</span>{% endfor %}
       </a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="{{ t.ouvrir_menu }}" data-ouvrir="{{ t.ouvrir_menu }}" data-fermer="{{ t.fermer_menu }}">
         <svg class="burger__ouvrir" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>

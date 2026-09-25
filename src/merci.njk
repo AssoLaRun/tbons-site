@@ -1,0 +1,20 @@
+---
+layout: base.njk
+pagination:
+  data: langues
+  size: 1
+  alias: lang
+permalink: "{{ '/merci/' if lang == 'fr' else '/rc/merci/' }}"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  titre: "{{ ui[lang].form_merci_titre }}"
+---
+{%- set t = ui[lang] -%}
+<header class="page-entete">
+  <div class="conteneur conteneur--etroit">
+    <h1>{{ t.form_merci_titre }}</h1>
+    <p class="grand-texte">{{ t.form_merci_texte }}</p>
+    <a class="bouton bouton--primaire" href="{{ '/' | lien(lang) }}">{{ t.form_retour }}</a>
+  </div>
+</header>
+<div class="bloc--bas"></div>

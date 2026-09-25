@@ -2,6 +2,7 @@
 layout: base.njk
 ---
 {%- from "partials/macros.njk" import photo -%}
+{%- set t = ui[lang] -%}
 <article>
   <header class="page-entete">
     <div class="conteneur conteneur--etroit">
@@ -12,5 +13,6 @@ layout: base.njk
   {% if image %}<div class="conteneur conteneur--etroit">{{ photo(image, titre, "", "page-photo") }}</div>{% endif %}
   <div class="conteneur conteneur--etroit prose">
     {{ content | safe }}
+    {% if page.fileSlug == "contact" %}{% include "partials/formulaire.njk" %}{% endif %}
   </div>
 </article>

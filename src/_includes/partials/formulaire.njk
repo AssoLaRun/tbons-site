@@ -1,0 +1,28 @@
+{# Formulaire de contact : les messages sont reçus par Netlify Forms et envoyés par e-mail #}
+<form class="formulaire" name="contact" method="POST" action="{{ '/merci/' | lien(lang) }}" data-netlify="true" netlify-honeypot="site_web">
+  <input type="hidden" name="form-name" value="contact">
+  <input type="hidden" name="langue" value="{{ lang }}">
+  <p class="formulaire__piege"><label>Ne pas remplir <input name="site_web" tabindex="-1" autocomplete="off"></label></p>
+  <div class="formulaire__ligne">
+    <div class="champ">
+      <label for="f-nom">{{ t.form_nom }}</label>
+      <input id="f-nom" name="nom" type="text" autocomplete="name" required>
+    </div>
+    <div class="champ">
+      <label for="f-email">{{ t.form_email }}</label>
+      <input id="f-email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+  <div class="champ">
+    <label for="f-objet">{{ t.form_objet }}</label>
+    <select id="f-objet" name="objet">
+      {% for o in t.form_objets.split(",") %}<option>{{ o | trim }}</option>{% endfor %}
+    </select>
+  </div>
+  <div class="champ">
+    <label for="f-message">{{ t.form_message }}</label>
+    <textarea id="f-message" name="message" rows="6" required></textarea>
+  </div>
+  <label class="case"><input type="checkbox" name="accord" value="oui" required> <span>{{ t.form_rgpd }}</span></label>
+  <button class="bouton bouton--primaire" type="submit">{{ t.form_envoyer }}</button>
+</form>

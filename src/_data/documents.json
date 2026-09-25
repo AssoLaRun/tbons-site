@@ -1,0 +1,8 @@
+{
+  "categories": [
+    { "nom": "Statuts", "nom_rc": "Bann statu" },
+    { "nom": "Procès-verbaux d'assemblée générale", "nom_rc": "Bann PV lasanblé zénéral" },
+    { "nom": "Rapports d'activité", "nom_rc": "Bann rapor d'aktivité" },
+    { "nom": "Bilans financiers", "nom_rc": "Bann bilan finansyé" }
+  ]
+}
