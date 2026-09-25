@@ -16,27 +16,27 @@ Né avec une première édition de 14 ambassadeurs issus de 7 lycées, le concou
 
 
 
-\## Un parcours d'engagement, pas seulement un concours
+\# Un parcours d'engagement, pas seulement un concours
 
 
 
-1. \*\*La sélection des ambassadeurs\*\* dans chaque lycée participant sur la base de l'éloquence.
+1. **La sélection des ambassadeurs** dans chaque lycée participant sur la base de l'éloquence.
 
-2. \*\*Le séminaire citoyen\*\* : plusieurs jours d'ateliers pour comprendre comment fonctionnent les institutions, de la commune à l'État ; rencontrer celles et ceux qui font vivre le territoire ; et mieux saisir les grands enjeux de la société réunionnaise. 
+2. **Le séminaire citoyen** : plusieurs jours d'ateliers pour comprendre comment fonctionnent les institutions, de la commune à l'État ; rencontrer celles et ceux qui font vivre le territoire ; et mieux saisir les grands enjeux de la société réunionnaise. 
 
-3. \*\*La préparation\*\* : pendant plusieurs semaiens, les ambassadeurs se retrouvent chaque semaine pour construire ensemble leurs prises de parole et les tableaux artistiques de la finale.
+3. **La préparation** : pendant plusieurs semaiens, les ambassadeurs se retrouvent chaque semaine pour construire ensemble leurs prises de parole et les tableaux artistiques de la finale.
 
-4. \*\*Le mois de l'engagement\*\* : les ambassadeurs mènent des actions concrètes sur le terrain, par exemple auprès des enfants hospitalisés, en partenariat avec l'ASFA ou encore en ramassant des déchets. 
+4. **Le mois de l'engagement** : les ambassadeurs mènent des actions concrètes sur le terrain, par exemple auprès des enfants hospitalisés, en partenariat avec l'ASFA ou encore en ramassant des déchets. 
 
-5. \*\*La Grande Finale\*\*, devant un jury de personnalités et les institutions du territoire.
-
-
-
-\## Édition 2026
+5. **La Grande Finale**, devant un jury de personnalités et les institutions du territoire.
 
 
 
-La Grande Finale s'est tenue le vendredi 18 septembre 2026 au Parc du Colosse, à Saint-André, avec le soutien de la Ville de Saint-André et du Crédit Agricole de La Réunion. Malgré la pluie, plus de 300 spectateurs ont assisté à \*SILANS\*, une création bilingue français-créole en onze tableaux portée par les lycéens eux-mêmes, sur les grandes questions qui traversent la jeunesse réunionnaise : l'identité, le deuil, la violence, la résilience, la solidarité, l'amour.
+\#Édition 2026
+
+
+
+La Grande Finale s'est tenue le vendredi 18 septembre 2026 au Parc du Colosse, à Saint-André, avec le soutien de la Ville de Saint-André et du Crédit Agricole de La Réunion. Malgré la pluie, plus de 300 spectateurs ont assisté à *SILANS*, une création bilingue français-créole en onze tableaux portée par les lycéens eux-mêmes, sur les grandes questions qui traversent la jeunesse réunionnaise : l'identité, le deuil, la violence, la résilience, la solidarité, l'amour.
 
 
 
@@ -44,19 +44,19 @@ Onze finalistes issus de sept lycées se sont présentés devant un jury de quin
 
 
 
-\*\*Palmarès 2026\*\*
+**Palmarès 2026**
 
 
 
-\- \*\*Ambassadeur\*\* : Théo Dalleau, lycée Levavasseur (Saint-Denis)
+\- **Ambassadeur** : Théo Dalleau, lycée Levavasseur (Saint-Denis)
 
-\- \*\*Ambassadrice\*\* : Elsa Didier, lycée Georges Brassens (Saint-Denis)
+\- **Ambassadrice** : Elsa Didier, lycée Georges Brassens (Saint-Denis)
 
-\- \*\*Vice-ambassadeur\*\* : Medhy Joséphine, lycée Paul Moreau (Bras-Panon)
+\- **Vice-ambassadeur** : Medhy Joséphine, lycée Paul Moreau (Bras-Panon)
 
-\- \*\*Vice-ambassadrice\*\* : Lhya Etienne Lebon, lycée Ambroise Vollard (Saint-Pierre)
+\- **Vice-ambassadrice** : Lhya Etienne Lebon, lycée Ambroise Vollard (Saint-Pierre)
 
-\- \*\*Porte-parole\*\* : Romario De Brito, lycée Jean Hinglo (Le Port)
+\- **Porte-parole** : Romario De Brito, lycée Jean Hinglo (Le Port)
 
 
 
@@ -64,7 +64,7 @@ Onze finalistes issus de sept lycées se sont présentés devant un jury de quin
 
 
 
-\## Et après ?
+\# Et après ?
 
 
 
