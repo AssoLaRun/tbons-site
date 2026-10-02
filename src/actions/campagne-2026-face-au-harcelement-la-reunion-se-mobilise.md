@@ -23,8 +23,6 @@ C’est à partir de cette réalité que To Be Or NotSubir lance une campagne d�
 
 ![](/assets/img/uploads/camapgne-reunionnaise.png)
 
-
-
 ## Le 05 novembre, un point de départ
 
 Le jeudi 05 novembre 2026 se tiendra la Journée nationale de lutte contre le harcèlement à l’École. Cette journée, organisée chaque année au mois de novembre, constitue un temps fort de sensibilisation etde mobilisation autour du harcèlement. C’est à cette date que To Be Or Not Subir lance sa campagne à La Réunion.
@@ -35,7 +33,7 @@ Mais pour nous, le 05 novembre n’est pas une fin.
 
 Pendant le mois de novembre, la campagne se déploiera à travers plusieurs actions complémentaires.
 
-### RONDS KOZÉ
+* ### RONDS KOZÉ
 
 PARLER.ÉCOUTER. ÉCHANGER.
 
@@ -45,7 +43,7 @@ Ils réunissent jeunes, familles et professionnels autour d’un même objectif 
 
 Des espaces pour libérer la parole et faire émerger des solutions.
 
-### NOU LÉ RH « RÉFÉRENT.EHARCÈLEMENT » : TRANSFORMER LAPAROLE EN UN REPÈRE CONCRET
+* ### NOU LÉ RH « RÉFÉRENT.EHARCÈLEMENT » : TRANSFORMER LAPAROLE EN UN REPÈRE CONCRET
 
 La campagne marque également le lancement du projet NOU LÉ RH "Référent.e Harcèlement".
 
@@ -56,8 +54,6 @@ Son contenu sera directement nourri par la parole recueillie pendant la campagne
 Le questionnaire et les échanges menés lors des Ronds Kozé contribueront ainsi à poser les premières bases du futur référentiel.
 
 LA PAROLE DU TERRAIN POUR CONSTRUIRE UN REPÈRE COMMUN.
-
-
 
 ## UNE CAMPAGNE QUI SE POURSUIT AUSSI EN LIGNE
 
@@ -74,8 +70,6 @@ Dans le cadre de la campagne, To Be Or Not Subir a créé unquestionnaire ouvert
 Les réponses recueillies permettront de mieux comprendreles réalités du territoire et contribueront à la construction du futur label NOULÉ RH « Référent.e Harcèlement ».
 
 **Quelques minutes pour répondre. Une parole quipeut faire avancer la démarche.**
-
-
 
 ![](/assets/img/uploads/question.png)
 
