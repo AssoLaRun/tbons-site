@@ -21,6 +21,10 @@ Une personne qui peut avoir du mal à en parler, un témoin qui ne sait pas touj
 
 C’est à partir de cette réalité que To Be Or NotSubir lance une campagne dédiée au harcèlement. 
 
+![](/assets/img/uploads/camapgne-reunionnaise.png)
+
+
+
 ## Le 05 novembre, un point de départ
 
 Le jeudi 05 novembre 2026 se tiendra la Journée nationale de lutte contre le harcèlement à l’École. Cette journée, organisée chaque année au mois de novembre, constitue un temps fort de sensibilisation etde mobilisation autour du harcèlement. C’est à cette date que To Be Or Not Subir lance sa campagne à La Réunion.
