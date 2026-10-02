@@ -73,7 +73,7 @@ Les réponses recueillies permettront de mieux comprendreles réalités du terri
 
 
 
-![](/assets/img/uploads/questionnaire.png)
+![](/assets/img/uploads/question.png)
 
 ## SOUTENIR LA DÉMARCHE
 
