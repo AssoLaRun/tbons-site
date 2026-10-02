@@ -13,19 +13,19 @@ brouillon: false
 ---
 # Une campagne réunionnaise pour lutter contre le harcèlement
 
-Le harcèlement fait partie des violences quipeuvent profondément marquer le quotidien des jeunes. À l’école, dans lesespaces de vie, entre pairs, mais aussi sur les réseaux sociaux, les situationspeuvent prendre différentes formes : moqueries répétées, insultes, rumeurs,humiliations, mise à l’écart, diffusion de contenus, messages ou violences enligne.
+Le harcèlement fait partie des violences qui peuvent profondément marquer le quotidien des jeunes. À l’école, dans les espaces de vie, entre pairs, mais aussi sur les réseaux sociaux, les situations peuvent prendre différentes formes : moqueries répétées, insultes, rumeurs, humiliations, mise à l’écart, diffusion de contenus, messages ou violences en ligne.
 
-Derrière chaque situation, il y a pourtant unepersonne.
+Derrière chaque situation, il y a pourtant une personne.
 
-Une personne qui peut avoir du mal à en parler,un témoin qui ne sait pas toujours comment réagir, une famille qui cherche desréponses ou un professionnel qui ne sait pas toujours vers qui se tourner.
+Une personne qui peut avoir du mal à en parler, un témoin qui ne sait pas toujours comment réagir, une famille qui cherche des réponses ou un professionnel qui ne sait pas toujours vers qui se tourner.
 
 C’est à partir de cette réalité que To Be Or NotSubir lance une campagne dédiée au harcèlement. 
 
 ## Le 05 novembre, un point de départ
 
-Le jeudi 5 novembre 2026 se tiendra la Journée nationale de lutte contre le harcèlement à l’École. Cette journée, organisée chaque année au mois de novembre, constitue un temps fort de sensibilisation etde mobilisation autour du harcèlement. C’est à cette date que To Be Or Not Subir lance sa campagne à La Réunion.
+Le jeudi 05 novembre 2026 se tiendra la Journée nationale de lutte contre le harcèlement à l’École. Cette journée, organisée chaque année au mois de novembre, constitue un temps fort de sensibilisation etde mobilisation autour du harcèlement. C’est à cette date que To Be Or Not Subir lance sa campagne à La Réunion.
 
-Mais pour nous, le 5 novembre n’est pas une fin.
+Mais pour nous, le 05 novembre n’est pas une fin.
 
 ## Une campagne construite autour de la parole
 
@@ -53,28 +53,32 @@ Le questionnaire et les échanges menés lors des Ronds Kozé contribueront ains
 
 LA PAROLE DU TERRAIN POUR CONSTRUIRE UN REPÈRE COMMUN.
 
+
+
 ## UNE CAMPAGNE QUI SE POURSUIT AUSSI EN LIGNE
 
 Parce que le harcèlement peut également se poursuivre derrière un écran, la campagne sera présente sur les réseaux sociaux tout au long du mois de novembre.
 
 Affiches, vidéos, publications et contenus de sensibilisation permettront de faire circuler les messages de la campagne, de déconstruire certaines idées reçues et d'encourager chacun à prendre part à la mobilisation.
 
-![]()
+![](/assets/img/uploads/campagne-rs.png)
 
 ## VOTRE PAROLE COMPTE
 
-Le questionnaire est ouvert à toutes celles et ceux qui souhaitent contribuer à la démarche.
+Dans le cadre de la campagne, To Be Or Not Subir a créé unquestionnaire ouvert à toutes celles et ceux qui souhaitent partager leurexpérience, leur perception et leurs attentes autour du harcèlement. 
 
-Vos réponses permettront de mieux comprendre les réalités vécues sur le territoire et participeront à la construction de NOULÉ RH « Référent.e Harcèlement ».
+Les réponses recueillies permettront de mieux comprendreles réalités du territoire et contribueront à la construction du futur label NOULÉ RH « Référent.e Harcèlement ».
+
+**Quelques minutes pour répondre. Une parole quipeut faire avancer la démarche.**
 
 
 
 ![](/assets/img/uploads/questionnaire.png)
 
-## SOUTENIR LADÉMARCHE
+## SOUTENIR LA DÉMARCHE
 
 ![](/assets/img/uploads/soutien-projet.png)
 
-La création de NOU LÉ RH nécessitera de développer son identité, ses outils et les ressources permettant d'accompagner les futurs référents.
+La création du label NOU LÉ RH nécessitera de développer son identité, ses outils et les ressources permettant d'accompagner les futurs référents.
 
-Une cagnotte citoyenne sera ouverte à partir du 5 novembre pour soutenir la création et le déploiement du projet.
+Une cagnotte citoyenne sera ouverte à partir du 05 novembre pour soutenir la création et le déploiement du projet.
