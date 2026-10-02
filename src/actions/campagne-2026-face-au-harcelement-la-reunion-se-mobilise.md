@@ -43,7 +43,7 @@ Ils réunissent jeunes, familles et professionnels autour d’un même objectif 
 
 Des espaces pour libérer la parole et faire émerger des solutions.
 
-* ### NOU LÉ RH « RÉFÉRENT.EHARCÈLEMENT » : TRANSFORMER LAPAROLE EN UN REPÈRE CONCRET
+### NOU LÉ RH « RÉFÉRENT.EHARCÈLEMENT » : TRANSFORMER LAPAROLE EN UN REPÈRE CONCRET
 
 La campagne marque également le lancement du projet NOU LÉ RH "Référent.e Harcèlement".
 
@@ -53,7 +53,7 @@ Son contenu sera directement nourri par la parole recueillie pendant la campagne
 
 Le questionnaire et les échanges menés lors des Ronds Kozé contribueront ainsi à poser les premières bases du futur référentiel.
 
-LA PAROLE DU TERRAIN POUR CONSTRUIRE UN REPÈRE COMMUN.
+**LA PAROLE DU TERRAIN POUR CONSTRUIRE UN REPÈRE COMMUN.**
 
 ## UNE CAMPAGNE QUI SE POURSUIT AUSSI EN LIGNE
 
@@ -65,18 +65,22 @@ Affiches, vidéos, publications et contenus de sensibilisation permettront de fa
 
 ## VOTRE PAROLE COMPTE
 
-Dans le cadre de la campagne, To Be Or Not Subir a créé unquestionnaire ouvert à toutes celles et ceux qui souhaitent partager leurexpérience, leur perception et leurs attentes autour du harcèlement. 
+Dans le cadre de la campagne, To Be Or Not Subir a créé un questionnaire ouvert à toutes celles et ceux qui souhaitent partager leur expérience, leur perception et leurs attentes autour du harcèlement. 
 
-Les réponses recueillies permettront de mieux comprendreles réalités du territoire et contribueront à la construction du futur label NOULÉ RH « Référent.e Harcèlement ».
+Les réponses recueillies permettront de mieux comprendre les réalités du territoire et contribueront à la construction du futur label NOU LÉ RH « Référent.e Harcèlement ».
 
-**Quelques minutes pour répondre. Une parole quipeut faire avancer la démarche.**
+**Quelques minutes pour répondre. Une parole qui peut faire avancer la démarche.**
 
 ![](/assets/img/uploads/question.png)
 
 ## SOUTENIR LA DÉMARCHE
 
+La créationdu label **NOULÉ RH « Référent.e Harcèlement »** nécessite dedévelopper son identité, ses outils et les ressources nécessaires pouraccompagner les futur.e.s référent.e.s.
+
+Pourpermettre au projet de passer de l’idée à sa mise en œuvre concrète, une cagnotte citoyenne sera ouverte à partir du 05 novembre.
+
+Les contributions permettront notamment de soutenir la création du label, la conception de ses outils, le développement de ressources pour les référent.e.s et le déploiement progressif du dispositif sur le territoire réunionnais.
+
+
+
 ![](/assets/img/uploads/soutien-projet.png)
-
-La création du label NOU LÉ RH nécessitera de développer son identité, ses outils et les ressources permettant d'accompagner les futurs référents.
-
-Une cagnotte citoyenne sera ouverte à partir du 05 novembre pour soutenir la création et le déploiement du projet.
