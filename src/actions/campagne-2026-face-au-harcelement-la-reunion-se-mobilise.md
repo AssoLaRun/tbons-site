@@ -33,7 +33,7 @@ Pendant le mois de novembre, la campagne se déploiera à travers plusieurs acti
 
 * ### RONDS KOZÉ
 
-PARLER.ÉCOUTER. ÉCHANGER.
+**PARLER.ÉCOUTER. ÉCHANGER.**
 
 Les Ronds Kozé sont des temps d’échange autour du harcèlement scolaire et du cyberharcèlement.
 
@@ -41,9 +41,9 @@ Ils réunissent jeunes, familles et professionnels autour d’un même objectif 
 
 Des espaces pour libérer la parole et faire émerger des solutions.
 
-### NOU LÉ RH « RÉFÉRENT.EHARCÈLEMENT » : TRANSFORMER LAPAROLE EN UN REPÈRE CONCRET
+* ### NOU LÉ RH « RÉFÉRENT.E HARCÈLEMENT » : TRANSFORMER LAPAROLE EN UN REPÈRE CONCRET
 
-La campagne marque également le lancement du projet NOU LÉ RH "Référent.e Harcèlement".
+  **La campagne marque également le lancement du projet NOU LÉ RH "Référent.e Harcèlement".**
 
 L’ambition est de construire un futur label permettant d’identifier des Référent.e.s Harcèlement au sein des structures du territoire. Mais ce label ne sera pas construit uniquement depuis un bureau.
 
