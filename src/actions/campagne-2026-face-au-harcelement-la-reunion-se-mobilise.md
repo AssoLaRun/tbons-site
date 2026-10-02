@@ -41,7 +41,7 @@ Ils réunissent jeunes, familles et professionnels autour d’un même objectif 
 
 Des espaces pour libérer la parole et faire émerger des solutions.
 
-* ### NOU LÉ RH « RÉFÉRENT.E HARCÈLEMENT » : TRANSFORMER LAPAROLE EN UN REPÈRE CONCRET
+* ### NOU LÉ RH « RÉFÉRENT.E HARCÈLEMENT » : TRANSFORMER LA PAROLE EN UN REPÈRE CONCRET
 
   **La campagne marque également le lancement du projet NOU LÉ RH "Référent.e Harcèlement".**
 
