@@ -6,7 +6,7 @@ resume: >-
 
 
   Lancée le 05 novembre, à l’occasion de la Journée nationale de lutte contre le harcèlement à l’École, la campagne se poursuit tout au long du mois pour sensibiliser, libérer la parole et construire des réponses avec le territoire.
-image: /assets/img/uploads/banniere-generale.png
+image: /assets/img/uploads/bannie-re-site-harcelement.png
 phare: false
 ordre: 10
 brouillon: false
