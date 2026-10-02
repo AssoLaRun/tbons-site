@@ -11,7 +11,7 @@ phare: false
 ordre: 10
 brouillon: false
 ---
-# Une campagne réunionnaise pour lutter contre le harcèlement 
+# Une campagne réunionnaise pour lutter contre le harcèlement
 
 Le harcèlement fait partie des violences quipeuvent profondément marquer le quotidien des jeunes. À l’école, dans lesespaces de vie, entre pairs, mais aussi sur les réseaux sociaux, les situationspeuvent prendre différentes formes : moqueries répétées, insultes, rumeurs,humiliations, mise à l’écart, diffusion de contenus, messages ou violences enligne.
 
@@ -21,13 +21,13 @@ Une personne qui peut avoir du mal à en parler,un témoin qui ne sait pas toujo
 
 C’est à partir de cette réalité que To Be Or NotSubir lance une campagne dédiée au harcèlement. 
 
-## Le 05 novembre, un point de départ 
+## Le 05 novembre, un point de départ
 
 Le jeudi 5 novembre 2026 se tiendra la Journée nationale de lutte contre le harcèlement à l’École. Cette journée, organisée chaque année au mois de novembre, constitue un temps fort de sensibilisation etde mobilisation autour du harcèlement. C’est à cette date que To Be Or Not Subir lance sa campagne à La Réunion.
 
 Mais pour nous, le 5 novembre n’est pas une fin.
 
-## Une campagne construite autour de la parole 
+## Une campagne construite autour de la parole
 
 Pendant le mois de novembre, la campagne se déploiera à travers plusieurs actions complémentaires.
 
@@ -53,15 +53,13 @@ Le questionnaire et les échanges menés lors des Ronds Kozé contribueront ains
 
 LA PAROLE DU TERRAIN POUR CONSTRUIRE UN REPÈRE COMMUN.
 
- 
-
 ## UNE CAMPAGNE QUI SE POURSUIT AUSSI EN LIGNE
 
 Parce que le harcèlement peut également se poursuivre derrière un écran, la campagne sera présente sur les réseaux sociaux tout au long du mois de novembre.
 
 Affiches, vidéos, publications et contenus de sensibilisation permettront de faire circuler les messages de la campagne, de déconstruire certaines idées reçues et d'encourager chacun à prendre part à la mobilisation.
 
-
+![](/assets/img/uploads/questionnaire.png)
 
 ## VOTRE PAROLE COMPTE
 
@@ -69,7 +67,7 @@ Le questionnaire est ouvert à toutes celles et ceux qui souhaitent contribuer �
 
 Vos réponses permettront de mieux comprendre les réalités vécues sur le territoire et participeront à la construction de NOULÉ RH « Référent.e Harcèlement ».
 
- 
+![](/assets/img/uploads/bannie-re-site-harcelement.png)
 
 ## SOUTENIR LADÉMARCHE
 
