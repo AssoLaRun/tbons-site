@@ -6,7 +6,7 @@ resume: >-
 
 
   Lancée le 05 novembre, à l’occasion de la Journée nationale de lutte contre le harcèlement à l’École, la campagne se poursuit tout au long du mois pour sensibiliser, libérer la parole et construire des réponses avec le territoire.
-image: /assets/img/uploads/bannie-re-site-harcelement.png
+image: /assets/img/uploads/banniere-generale.png
 phare: false
 ordre: 10
 brouillon: false
@@ -59,7 +59,7 @@ Parce que le harcèlement peut également se poursuivre derrière un écran, la 
 
 Affiches, vidéos, publications et contenus de sensibilisation permettront de faire circuler les messages de la campagne, de déconstruire certaines idées reçues et d'encourager chacun à prendre part à la mobilisation.
 
-![](/assets/img/uploads/questionnaire.png)
+![]()
 
 ## VOTRE PAROLE COMPTE
 
@@ -67,9 +67,13 @@ Le questionnaire est ouvert à toutes celles et ceux qui souhaitent contribuer �
 
 Vos réponses permettront de mieux comprendre les réalités vécues sur le territoire et participeront à la construction de NOULÉ RH « Référent.e Harcèlement ».
 
-![](/assets/img/uploads/bannie-re-site-harcelement.png)
+
+
+![](/assets/img/uploads/questionnaire.png)
 
 ## SOUTENIR LADÉMARCHE
+
+![](/assets/img/uploads/soutien-projet.png)
 
 La création de NOU LÉ RH nécessitera de développer son identité, ses outils et les ressources permettant d'accompagner les futurs référents.
 
