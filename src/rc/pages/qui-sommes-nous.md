@@ -1,6 +1,6 @@
 ---
 titre: Kisa nou lé ?
-chapo: In lasosiasyon la fine fèt Sint-Klotild, porté par bann zénes.
+chapo: In lasosiasyon la fine fèt Sint-André, porté par bann zénes.
 ---
 To Be or Not Subir la fine fèt an 2023 Sint-Klotild, avèk in konviksyon sinp : pa in zénes i doi subir. Ni lo harsèlman, ni bann diskriminasyon, ni lo santiman ké la vi piblik i désid san li. Jody Nanou, sa la kré lasosiasyon, li minm la subi lo harsèlman lékol. Li la vouli fé in fors kolèktiv avèk sa.
 
