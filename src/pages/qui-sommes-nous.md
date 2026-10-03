@@ -1,6 +1,6 @@
 ---
 titre: Qui sommes-nous ?
-chapo: Une association née à Sainte-Clotilde, portée par des jeunes.
+chapo: Une association née à Saint-André, portée par des jeunes.
 image: /assets/img/uploads/dsc02045.jpg
 ordre_menu: 1
 ---
