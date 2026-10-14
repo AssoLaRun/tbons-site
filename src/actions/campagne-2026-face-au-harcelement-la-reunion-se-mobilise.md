@@ -69,14 +69,18 @@ Les réponses recueillies permettront de mieux comprendre les réalités du terr
 
 **Quelques minutes pour répondre. Une parole qui peut faire avancer la démarche.**
 
+Lien vers le questionnaire : https://docs.google.com/forms/d/e/1FAIpQLSfCGvtlviHDUAi-Vy2sVK8bnQBnI3TUj8p3-LqgA-QjOPREwQ/viewform?usp=publish-editor 
+
 ![](/assets/img/uploads/question.png)
 
 ## SOUTENIR LA DÉMARCHE
 
-La créationdu label **NOULÉ RH « Référent.e Harcèlement »** nécessite dedévelopper son identité, ses outils et les ressources nécessaires pouraccompagner les futur.e.s référent.e.s.
+La créationdu label **NOULÉ RH « Référent.e Harcèlement »** nécessite de développer son identité, ses outils et les ressources nécessaires pouraccompagner les futur.e.s référent.e.s.
 
 Pourpermettre au projet de passer de l’idée à sa mise en œuvre concrète, une cagnotte citoyenne sera ouverte à partir du 05 novembre.
 
 Les contributions permettront notamment de soutenir la création du label, la conception de ses outils, le développement de ressources pour les référent.e.s et le déploiement progressif du dispositif sur le territoire réunionnais.
+
+Lien de la cagnotte : https://www.helloasso.com/associations/to-be-or-not-subir/collectes/nou-le-rh-le-label-reunionnais-contre-le-harcelement 
 
 ![](/assets/img/uploads/soutien-projet.png)
