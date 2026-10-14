@@ -69,7 +69,7 @@ Les réponses recueillies permettront de mieux comprendre les réalités du terr
 
 **Quelques minutes pour répondre. Une parole qui peut faire avancer la démarche.**
 
-Lien vers le questionnaire : https://docs.google.com/forms/d/e/1FAIpQLSfCGvtlviHDUAi-Vy2sVK8bnQBnI3TUj8p3-LqgA-QjOPREwQ/viewform?usp=publish-editor 
+Lien vers le questionnaire : <https://docs.google.com/forms/d/e/1FAIpQLSfCGvtlviHDUAi-Vy2sVK8bnQBnI3TUj8p3-LqgA-QjOPREwQ/viewform?usp=publish-editor> 
 
 ![](/assets/img/uploads/question.png)
 
@@ -81,6 +81,6 @@ Pourpermettre au projet de passer de l’idée à sa mise en œuvre concrète, u
 
 Les contributions permettront notamment de soutenir la création du label, la conception de ses outils, le développement de ressources pour les référent.e.s et le déploiement progressif du dispositif sur le territoire réunionnais.
 
-Lien de la cagnotte : https://www.helloasso.com/associations/to-be-or-not-subir/collectes/nou-le-rh-le-label-reunionnais-contre-le-harcelement 
+Lien de la cagnotte : <https://www.helloasso.com/associations/to-be-or-not-subir/collectes/nou-le-rh-le-label-reunionnais-contre-le-harcelement >
 
 ![](/assets/img/uploads/soutien-projet.png)
