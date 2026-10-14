@@ -5,7 +5,7 @@ resume: "Des lycéens et lycéennes de toute l'île deviennent ambassadeurs :
   et les institutions du territoire."
 image: /assets/img/uploads/3911971c-577b-4488-a50d-b2c98042fd15.jpeg
 image_alt: Séminaire citoyen ARIL
-phare: true
+phare: false
 ordre: 1
 ---
 Le concours Ambassadeur Réunion Inter-Lycée (ARIL) est le projet phare de To Be or Not Subir. Son idée est simple : révéler des lycéens qui osent prendre la parole, assumer leurs convictions et porter la voix de leur génération et de leur territoire.
