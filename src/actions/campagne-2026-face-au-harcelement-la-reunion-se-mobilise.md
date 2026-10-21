@@ -83,4 +83,14 @@ Les contributions permettront notamment de soutenir la création du label, la co
 
 Lien de la cagnotte : <https://www.helloasso.com/associations/to-be-or-not-subir/collectes/nou-le-rh-le-label-reunionnais-contre-le-harcelement>
 
+
+
 ![](/assets/img/uploads/soutien-projet.png)
+
+## RETROUVEZ TOUS LES SUPPORTS DE LA CAMPAGNE
+
+Retrouvez l’ensemble des supports de la campagne en cliquant sur le lien ci-dessous.
+
+De nouveaux contenus seront ajoutés régulièrement afin de vous permettre de suivre les actualités et de retrouver facilement les ressources mises à votre disposition.
+
+**[Accéder aux supports de la campagne](https://drive.google.com/drive/folders/1FmvgABkOD7-wn73bDoKQ7lkJF0YBiMBR)**
