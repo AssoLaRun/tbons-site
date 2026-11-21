@@ -437,12 +437,10 @@ a:hover { color: var(--lagon-fonce); }
   .actions .action-phare__photo { min-height: 260px; }
 }
 
-/* Partenaires : logos harmonisés, en couleur au survol */
+/* Partenaires : léger relief au survol */
 .logo { transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
-.logo img { max-height: 64px; max-width: 100%; filter: grayscale(1); opacity: .75; transition: filter .25s ease, opacity .25s ease; }
+.logo img { max-height: 64px; max-width: 100%; }
 .logo:hover, .logo:focus-visible { border-color: var(--lagon-clair); box-shadow: 0 8px 24px rgba(23, 63, 58, .08); transform: translateY(-2px); }
-.logo:hover img, .logo:focus-visible img { filter: none; opacity: 1; }
-@media (hover: none) { .logo img { filter: none; opacity: 1; } }
 
 /* Cartes : légère ombre au survol */
 .carte--action:hover, .action-phare:hover { box-shadow: 0 12px 32px rgba(23, 63, 58, .12); }
