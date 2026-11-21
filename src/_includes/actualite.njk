@@ -12,7 +12,7 @@ layout: base.njk
       {% if resume %}<p class="grand-texte">{{ resume }}</p>{% endif %}
     </div>
   </header>
-  {% if image %}<div class="conteneur conteneur--etroit">{{ photo(image, image_alt, "", "page-photo") }}</div>{% endif %}
+  {% if image and not image.startsWith("http") %}<div class="conteneur conteneur--etroit">{{ photo(image, image_alt, "", "page-photo") }}</div>{% endif %}
   <div class="conteneur conteneur--etroit prose">
     {{ content | safe }}
     {% if categorie == "Événement" and lien_inscription %}<p class="actu--evenement" data-date="{{ page.date | isoDate }}"><a class="bouton bouton--accent actu__inscription"{% if not (page.date | aVenir) %} hidden{% endif %} href="{{ lien_inscription }}">{{ t.evt_inscrire }}</a></p>{% endif %}

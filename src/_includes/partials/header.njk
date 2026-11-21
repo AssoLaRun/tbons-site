@@ -28,8 +28,8 @@
         <li><a href="{{ '/contact/' | lien(lang) }}" {% if "/contact/" in url %}aria-current="page"{% endif %}>{{ t.menu_contact }}</a></li>
       </ul>
       <div class="menu__boutons">
-        <a class="bouton bouton--contour" href="{{ site.lien_adhesion or ('/nous-soutenir/' | lien(lang)) }}">{{ t.adherer }}</a>
-        <a class="bouton bouton--accent" href="{{ site.lien_don or ('/nous-soutenir/' | lien(lang)) }}">{{ t.faire_don }}</a>
+        <a class="bouton bouton--contour" href="{{ site.lien_adhesion or ('/contact/' | lien(lang)) }}">{{ t.adherer }}</a>
+        <a class="bouton bouton--accent" href="{{ site.lien_don or ('/contact/' | lien(lang)) }}">{{ t.faire_don }}</a>
       </div>
     </nav>
   </div>

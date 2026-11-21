@@ -1,0 +1,11 @@
+{
+  "name": "To Be or Not Subir",
+  "short_name": "TBONS",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#087B5D",
+  "background_color": "#F7F8F3",
+  "display": "browser"
+}

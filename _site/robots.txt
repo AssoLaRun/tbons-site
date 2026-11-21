@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /merci/
+Disallow: /rc/merci/
+
+Sitemap: https://tobeornot-subir.com/sitemap.xml
