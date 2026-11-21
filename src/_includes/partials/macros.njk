@@ -1,12 +1,6 @@
-{# Affiche la photo si elle existe, sinon un emplacement réservé.
-   Les images hébergées sur d'autres sites (presse, etc.) ne sont pas chargées :
-   chaque visite enverrait l'adresse IP du visiteur à ces sites, et l'image
-   disparaîtrait si le média la supprime. On affiche à la place un visuel aux
-   couleurs de l'association. Pour avoir la vraie photo, l'ajouter dans l'admin. #}
+{# Affiche la photo si elle existe, sinon un emplacement réservé #}
 {% macro photo(src, alt, label, classe) %}
-{%- if src and (src.startsWith("http://") or src.startsWith("https://") or src.startsWith("//")) -%}
-<div class="photo photo--marque {{ classe }}" role="img" aria-label="{{ alt or label }}"><img src="/assets/img/embleme.svg" alt="" width="96" height="96"></div>
-{%- elif src -%}
+{%- if src -%}
 <img class="photo {{ classe }}" src="{{ src }}" alt="{{ alt or '' }}" loading="lazy" decoding="async">
 {%- else -%}
 <div class="photo photo--vide {{ classe }}" role="img" aria-label="{{ alt or label }}"><span>{{ label or "Photo à ajouter" }}</span></div>

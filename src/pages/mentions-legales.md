@@ -44,7 +44,7 @@ L'association To Be or Not Subir est responsable des traitements de données per
 
 ## Cookies et mesure d'audience
 
-Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience ni de publicité. C'est pourquoi aucun bandeau de consentement ne s'affiche. Les polices d'écriture et les images sont hébergées sur le site lui-même : la consultation des pages n'envoie aucune donnée à Google ou à d'autres services tiers.
+Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience ni de publicité. C'est pourquoi aucun bandeau de consentement ne s'affiche. Les polices d'écriture sont hébergées sur le site lui-même. Certaines illustrations de la page Actualités sont affichées depuis les sites des médias concernés : leur affichage transmet votre adresse IP à ces sites, comme pour toute image chargée depuis un autre site.
 
 Les liens vers les réseaux sociaux, HelloAsso ou Google Forms ouvrent les sites de ces services, qui appliquent alors leurs propres règles en matière de cookies.
 
