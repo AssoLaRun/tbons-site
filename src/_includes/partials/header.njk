@@ -2,8 +2,9 @@
 {%- set url = page.url or "" -%}
 <header class="entete">
   <div class="entete__barre conteneur">
-    <a class="marque{% if site.logo and not site.afficher_nom %} marque--logo-seul{% endif %}" href="{{ racine }}" aria-label="{{ site.nom }}, {{ t.accueil }}">
-      {% if site.logo %}<img class="marque__logo" src="{{ site.logo }}" alt="">{% else %}<span class="marque__logo marque__logo--texte" aria-hidden="true">TB</span>{% endif %}
+    {%- set logo_entete = site.logo_entete or site.logo -%}
+    <a class="marque{% if logo_entete and not site.afficher_nom %} marque--logo-seul{% endif %}" href="{{ racine }}" aria-label="{{ site.nom }}, {{ t.accueil }}">
+      {% if logo_entete %}<img class="marque__logo" src="{{ logo_entete }}" alt="" width="48" height="48">{% else %}<span class="marque__logo marque__logo--texte" aria-hidden="true">TB</span>{% endif %}
       <span class="marque__texte">
         <span class="marque__nom">{{ site.nom }}</span>
         <span class="marque__baseline">{{ t.baseline }}</span>

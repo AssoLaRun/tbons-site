@@ -47,6 +47,7 @@ collections:
           - { name: description, label: "Description (Google et réseaux sociaux)", widget: text }
           - { name: url, label: "Adresse du site", widget: string }
           - { name: logo, label: "Logo (PNG à fond transparent de préférence)", widget: image, required: false }
+          - { name: logo_entete, label: "Emblème carré affiché en haut du site (à côté du nom)", widget: image, required: false }
           - { name: afficher_nom, label: "Afficher aussi le nom de l'association à côté du logo", widget: boolean, default: false, required: false }
           - { name: email, label: "E-mail de contact", widget: string, required: false }
           - { name: telephone, label: "Téléphone", widget: string, required: false }

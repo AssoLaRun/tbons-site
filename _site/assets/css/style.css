@@ -422,3 +422,45 @@ a:hover { color: var(--lagon-fonce); }
   .soutenir { border-radius: 24px; }
   .pied__colonnes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 }
+
+/* ==========================================================
+   Finitions graphiques (novembre 2026)
+   ========================================================== */
+
+/* En-tête : emblème net + nom de l'association */
+.marque__logo { width: 48px; height: 48px; border-radius: 0; }
+.marque__baseline { font-style: italic; }
+
+/* Nos actions : le projet phare occupe toute la largeur, les autres cartes se rangent dessous */
+@media (min-width: 701px) {
+  .actions .action-phare { grid-column: 1 / -1; order: -1; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); min-height: 360px; }
+  .actions .action-phare__photo { min-height: 260px; }
+}
+
+/* Partenaires : logos harmonisés, en couleur au survol */
+.logo { transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.logo img { max-height: 64px; max-width: 100%; filter: grayscale(1); opacity: .75; transition: filter .25s ease, opacity .25s ease; }
+.logo:hover, .logo:focus-visible { border-color: var(--lagon-clair); box-shadow: 0 8px 24px rgba(23, 63, 58, .08); transform: translateY(-2px); }
+.logo:hover img, .logo:focus-visible img { filter: none; opacity: 1; }
+@media (hover: none) { .logo img { filter: none; opacity: 1; } }
+
+/* Cartes : légère ombre au survol */
+.carte--action:hover, .action-phare:hover { box-shadow: 0 12px 32px rgba(23, 63, 58, .12); }
+.actu__photo { transition: transform .35s ease; }
+.actu:hover .actu__photo, .actu__lien:hover .actu__photo { transform: scale(1.02); }
+
+/* Apparition douce des blocs au défilement (navigateurs récents, sans JavaScript).
+   Désactivée pour les personnes qui ont demandé moins d'animations. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .carte, .action-phare, .logo, .actu, .tuile, .chiffre {
+      animation: apparaitre linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+@keyframes apparaitre {
+  from { opacity: 0; translate: 0 18px; }
+  to { opacity: 1; translate: 0 0; }
+}
