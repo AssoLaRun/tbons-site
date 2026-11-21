@@ -182,9 +182,9 @@ permalink: "{{ '/' if lang == 'fr' else '/rc/' }}"
         <p>{{ K.soutenir.texte or A.soutenir.texte }}</p>
       </div>
       <div class="soutenir__liens">
-        <a class="ligne-bouton ligne-bouton--accent" href="{{ site.lien_don or ('/nous-soutenir/' | lien(lang)) }}"><span>{{ t.don_ligne }}</span><span aria-hidden="true">→</span></a>
-        <a class="ligne-bouton" href="{{ site.lien_adhesion or ('/nous-soutenir/' | lien(lang)) }}"><span>{{ t.adherer_ligne }}</span><span aria-hidden="true">→</span></a>
-        <a class="ligne-bouton" href="{{ '/nous-soutenir/' | lien(lang) }}"><span>{{ t.partenaire_ligne }}</span><span aria-hidden="true">→</span></a>
+        <a class="ligne-bouton ligne-bouton--accent" href="{{ site.lien_don or ('/contact/' | lien(lang)) }}"><span>{{ t.don_ligne }}</span><span aria-hidden="true">→</span></a>
+        <a class="ligne-bouton" href="{{ site.lien_adhesion or ('/contact/' | lien(lang)) }}"><span>{{ t.adherer_ligne }}</span><span aria-hidden="true">→</span></a>
+        <a class="ligne-bouton" href="{{ '/contact/' | lien(lang) }}"><span>{{ t.partenaire_ligne }}</span><span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>

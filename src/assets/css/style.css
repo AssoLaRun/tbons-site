@@ -2,6 +2,20 @@
    TBONS – feuille de style
    Couleurs et polices modifiables ici (variables ci-dessous)
    ========================================================== */
+/* Polices hébergées sur le site (aucune requête vers Google Fonts) */
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 200 800; font-display: swap;
+  src: url(/assets/fonts/bricolage-grotesque-latin.woff2) format('woff2-variations'), url(/assets/fonts/bricolage-grotesque-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 200 800; font-display: swap;
+  src: url(/assets/fonts/bricolage-grotesque-latin-ext.woff2) format('woff2-variations'), url(/assets/fonts/bricolage-grotesque-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Public Sans'; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url(/assets/fonts/public-sans-latin.woff2) format('woff2-variations'), url(/assets/fonts/public-sans-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Public Sans'; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url(/assets/fonts/public-sans-latin-ext.woff2) format('woff2-variations'), url(/assets/fonts/public-sans-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+
 :root {
   --sable: #F7F8F3;
   --sable-fonce: #E8EEE1;
@@ -407,4 +421,44 @@ a:hover { color: var(--lagon-fonce); }
   .actu__photo { height: 190px; }
   .soutenir { border-radius: 24px; }
   .pied__colonnes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+}
+
+/* ==========================================================
+   Finitions graphiques (novembre 2026)
+   ========================================================== */
+
+/* En-tête : emblème net + nom de l'association */
+.marque__logo { width: 48px; height: 48px; border-radius: 0; }
+.marque__baseline { font-style: italic; }
+
+/* Nos actions : le projet phare occupe toute la largeur, les autres cartes se rangent dessous */
+@media (min-width: 701px) {
+  .actions .action-phare { grid-column: 1 / -1; order: -1; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); min-height: 360px; }
+  .actions .action-phare__photo { min-height: 260px; }
+}
+
+/* Partenaires : léger relief au survol */
+.logo { transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.logo img { max-height: 64px; max-width: 100%; }
+.logo:hover, .logo:focus-visible { border-color: var(--lagon-clair); box-shadow: 0 8px 24px rgba(23, 63, 58, .08); transform: translateY(-2px); }
+
+/* Cartes : légère ombre au survol */
+.carte--action:hover, .action-phare:hover { box-shadow: 0 12px 32px rgba(23, 63, 58, .12); }
+.actu__photo { transition: transform .35s ease; }
+.actu:hover .actu__photo, .actu__lien:hover .actu__photo { transform: scale(1.02); }
+
+/* Apparition douce des blocs au défilement (navigateurs récents, sans JavaScript).
+   Désactivée pour les personnes qui ont demandé moins d'animations. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .carte, .action-phare, .logo, .actu, .tuile, .chiffre {
+      animation: apparaitre linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+@keyframes apparaitre {
+  from { opacity: 0; translate: 0 18px; }
+  to { opacity: 1; translate: 0 0; }
 }

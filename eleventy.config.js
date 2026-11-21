@@ -17,6 +17,10 @@ export default function (eleventyConfig) {
   // Fichiers copiés tels quels
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");
+  // Icônes du site (onglet du navigateur, résultats Google, écran d'accueil du téléphone)
+  for (const f of ["favicon.ico", "favicon.svg", "apple-touch-icon.png", "icon-192.png", "icon-512.png", "site.webmanifest"]) {
+    eleventyConfig.addPassthroughCopy({ [`src/${f}`]: f });
+  }
   eleventyConfig.ignores.add("src/admin/**");
 
   const trier = (a, b) => (a.data.ordre ?? 99) - (b.data.ordre ?? 99);

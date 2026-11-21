@@ -14,9 +14,20 @@
   <meta property="og:site_name" content="{{ site.nom }}">
   <meta property="og:locale" content="{{ 'fr_FR' if lang == 'fr' else 'fr_RE' }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image" content="{{ site.url }}{{ image or accueil.hero.photo or site.logo }}">
+  {%- if image and image.startsWith("/") %}
+  <meta property="og:image" content="{{ site.url }}{{ image }}">
+  {%- else %}
+  <meta property="og:image" content="{{ site.url }}/assets/img/partage.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="To Be or Not Subir, la force d'exister, sans subir.">
+  {%- endif %}
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="{{ site.logo or '/assets/img/favicon.png' }}">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#087B5D">
   {% if page.url == "/" %}
   <script type="application/ld+json">
   {
@@ -25,7 +36,7 @@
     "name": {{ site.nom | dump | safe }},
     "alternateName": "TBONS",
     "url": {{ site.url | dump | safe }},
-    "logo": {{ (site.url + site.logo) | dump | safe }},
+    "logo": {{ (site.url + "/icon-512.png") | dump | safe }},
     "description": {{ site.description | dump | safe }},
     "foundingDate": "2023",
     "email": {{ site.email | dump | safe }},
@@ -35,9 +46,8 @@
   </script>
   {% endif %}
   <link rel="alternate" hreflang="{{ 'rcf' if lang == 'fr' else 'fr' }}" href="{{ page.url | autreLangue(lang, collections.all) }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap">
+  <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/menu.js" defer></script>
 </head>

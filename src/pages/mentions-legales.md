@@ -28,15 +28,25 @@ L'ensemble des contenus de ce site (textes, photographies, logos, visuels) est l
 
 ## Données personnelles
 
-Les informations transmises via le formulaire de contact (nom, adresse e-mail, objet et message) sont utilisées uniquement pour répondre à votre demande. Elles sont destinées aux membres du bureau de l'association et ne sont ni vendues ni cédées à des tiers.
+L'association To Be or Not Subir est responsable des traitements de données personnelles réalisés à partir de ce site. Ces données sont destinées aux seuls membres du bureau. Elles ne sont ni vendues, ni cédées, ni utilisées à des fins commerciales.
 
-Ces données sont recueillies avec votre consentement et conservées le temps nécessaire au traitement de votre demande, et au plus trois ans après notre dernier échange. Les messages transitent par le service de formulaires de notre hébergeur Netlify, situé aux États-Unis.
+**Formulaire de contact.** Les informations transmises (nom, adresse e-mail, objet et message) servent uniquement à répondre à votre demande. Elles sont recueillies avec votre accord et conservées le temps nécessaire au traitement de votre demande, puis au plus trois ans après notre dernier échange. Les messages transitent par le service de formulaires de notre hébergeur Netlify.
 
-Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition sur vos données. Pour l'exercer, écrivez à contact@tobeornot-subir.com. Vous pouvez également adresser une réclamation à la CNIL (cnil.fr).
+**Adhésion.** Le bouton « Adhérer » renvoie vers un formulaire Google Forms. Les informations que vous y saisissez sont enregistrées par Google pour le compte de l'association et servent à la gestion des adhésions. Elles sont conservées pendant la durée de l'adhésion, puis au plus trois ans après la fin de celle-ci.
 
-## Cookies
+**Dons.** Les dons sont collectés par HelloAsso, sur son propre site. HelloAsso traite vos données de paiement selon sa propre politique de confidentialité. L'association reçoit les informations utiles à l'établissement des reçus fiscaux.
 
-Ce site n'utilise aucun cookie publicitaire ni outil de mesure d'audience. Les polices d'écriture sont chargées depuis Google Fonts, ce qui transmet votre adresse IP à Google lors de la consultation.
+**Transferts hors de l'Union européenne.** Netlify et Google sont établis aux États-Unis. Ces transferts sont encadrés par le cadre de protection des données UE–États-Unis (Data Privacy Framework), auquel ces sociétés adhèrent, et par les clauses contractuelles types de la Commission européenne.
+
+**Vos droits.** Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données. Pour l'exercer, écrivez à contact@tobeornot-subir.com. Vous pouvez également adresser une réclamation à la CNIL (cnil.fr).
+
+**Photos.** Les personnes photographiées lors de nos actions, ou leurs représentants légaux pour les mineurs, peuvent demander à tout moment le retrait d'une photo en écrivant à contact@tobeornot-subir.com.
+
+## Cookies et mesure d'audience
+
+Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience ni de publicité. C'est pourquoi aucun bandeau de consentement ne s'affiche. Les polices d'écriture sont hébergées sur le site lui-même. Certaines illustrations de la page Actualités sont affichées depuis les sites des médias concernés : leur affichage transmet votre adresse IP à ces sites, comme pour toute image chargée depuis un autre site.
+
+Les liens vers les réseaux sociaux, HelloAsso ou Google Forms ouvrent les sites de ces services, qui appliquent alors leurs propres règles en matière de cookies.
 
 ## Liens externes
 
